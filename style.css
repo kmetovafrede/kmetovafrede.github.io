@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cormorant', sans-serif;
+    font-family: 'Cormorant';
     scroll-behavior: smooth;
 }
 
@@ -56,7 +56,7 @@ h2 {
 }
 
 .about_subheading {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope';
     text-transform: uppercase;
     color: var(--fourth_blue);
     font-weight: 500;
@@ -72,7 +72,7 @@ h2 {
 }
 
 .about_subheading b {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope';
     text-transform: uppercase;
     color: var(--seventh_blue);
     font-weight: 500;
