@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: light_blue;
     padding-left: 15rem;
 }
 
@@ -30,7 +30,7 @@ h2 {
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: var(--light_blue);
+    color: var(--dark_blue);
     padding-left: 2rem;
 }
 
