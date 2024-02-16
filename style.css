@@ -49,3 +49,22 @@ h2 {
     width: 80%;
     text-align: justify;
 }
+
+.about_subheading {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: var(--my_darkbrown);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.about_subheading a {
+    color: var(--my_lightbrown);
+    text-decoration: underline;
+    font-size: normal;
+    letter-spacing: 0;
+}
+section {
+    display: block;
+}
