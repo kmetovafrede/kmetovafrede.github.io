@@ -45,3 +45,7 @@ h2 {
 .about_content a {
     text-decoration: none;
 }
+.right_bar .section {
+    width: 80%;
+    text-align: justify;
+}
