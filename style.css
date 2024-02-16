@@ -2,15 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cormorant', serif;
     scroll-behavior: smooth;
 }
 
+.header h1 {
+    color: #4c629c;
+    font-family: 'Helvetica', serif;
+}
+
 .header {
-    color: #97b3ff;
+    background-color: #97b3ff;
     text-align: center;
 }
 
-body {
-    background-color: #4c629c;
-}
