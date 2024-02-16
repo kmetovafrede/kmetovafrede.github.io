@@ -7,30 +7,36 @@
 }
 
 :root {
-    --dark_blue: #4c629c;
-    --light_blue: #97b3ff;
+    --first_blue: #cfe0f0;
+    --second_blue: #c2dcf2;
+    --third_blue: #a4c4e0;
+    --fourth_blue: #7d95b9;
+    --fifth_blue: #304674;
+    --sixth_blue: #3e4772;
+    --seventh_blue: #1E2338;
+    --b_black: #000000;
 }
 
 body {
-    background-color: light_blue;
+    background-color: --second_blue;
     padding-left: 15rem;
 }
 
-/* definition of styles for 'h' elements */
 h1 {
     margin-top: 0;
-    font-family: 'Cormorant', sans-serif;
+    font-family: 'Cormorant';
     font-weight: 600;
     font-size: 2.5rem;
+    color: var(--fifth_blue);
     text-transform: uppercase;
 }
 
 h2 {
-    font-family: 'Cormorant', sans-serif;
+    font-family: 'Cormorant';
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: var(--dark_blue);
+    color: var(--fifth_blue);
     padding-left: 2rem;
 }
 
@@ -41,7 +47,6 @@ h2 {
     gap: 1rem;
 }
 
-/* delete underline from the big name used as hyperlink */
 .about_content a {
     text-decoration: none;
 }
@@ -51,19 +56,28 @@ h2 {
 }
 
 .about_subheading {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Manrope', sans-serif;
     text-transform: uppercase;
-    color: var(--dark_blue);
+    color: var(--fourth_blue);
     font-weight: 500;
     font-size: 1rem;
     letter-spacing: 0.2rem;
 }
 
 .about_subheading a {
-    color: var(--light_blue);
+    color: var(b_black);
     text-decoration: underline;
     font-size: normal;
     letter-spacing: 0;
+}
+
+.about_subheading b {
+    font-family: 'Manrope', sans-serif;
+    text-transform: uppercase;
+    color: var(--seventh_blue);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
 }
 section {
     display: block;
