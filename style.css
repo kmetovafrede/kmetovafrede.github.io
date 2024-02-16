@@ -6,14 +6,11 @@
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #97b3ff;
-}
-
 h1 {
-    font-size: 3rem;
-    font-weight: 700;
     color: #647dc2;
     text-align: center;
-    margin-top: 2rem;
+}
+
+body {
+    background-color: #97b3ff;
 }
