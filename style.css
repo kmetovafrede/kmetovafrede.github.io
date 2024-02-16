@@ -83,16 +83,25 @@ h3 {
     font-size: 1rem;
     letter-spacing: 0.2rem;
 }
+.about_text p {
+    color: var(--b_black);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
 
 .education {
-    font-family: 'Manrope';
     color: var(--b_black);
     font-weight: 600;
     font-size: 1rem;
 }
-.about_text {
-    font-family: 'Manrope';
+
+.experience {
+    color: var(--b_black);
+    font-weight: 600;
+    font-size: 1rem;
 }
+
 section {
     display: block;
 }
