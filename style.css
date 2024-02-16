@@ -6,11 +6,11 @@
     scroll-behavior: smooth;
 }
 
-h1 {
-    color: #647dc2;
+.header {
+    color: #97b3ff;
     text-align: center;
 }
 
 body {
-    background-color: #97b3ff;
+    background-color: #647dc2;
 }
