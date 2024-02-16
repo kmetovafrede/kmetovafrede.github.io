@@ -53,14 +53,14 @@ h2 {
 .about_subheading {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    color: var(--my_darkbrown);
+    color: var(--dark_blue);
     font-weight: 500;
     font-size: 1rem;
     letter-spacing: 0.2rem;
 }
 
 .about_subheading a {
-    color: var(--my_lightbrown);
+    color: var(--light_blue);
     text-decoration: underline;
     font-size: normal;
     letter-spacing: 0;
