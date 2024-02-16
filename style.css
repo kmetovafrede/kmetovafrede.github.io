@@ -11,9 +11,10 @@
     --second_blue: #c2dcf2;
     --third_blue: #a4c4e0;
     --fourth_blue: #7d95b9;
-    --fifth_blue: #304674;
-    --sixth_blue: #3e4772;
-    --seventh_blue: #1E2338;
+    --fifth_blue: #4f5ea8;
+    --sixth_blue: #304674;
+    --seventh_blue: #112d68;
+    --eight_blue: #1E2338;
     --b_black: #000000;
 }
 
@@ -27,17 +28,23 @@ h1 {
     font-family: 'Cormorant';
     font-weight: 600;
     font-size: 2.5rem;
-    color: var(--fifth_blue);
+    color: var(--sixth_blue);
     text-transform: uppercase;
 }
 
 h2 {
     font-family: 'Cormorant';
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     color: var(--fifth_blue);
-    padding-left: 2rem;
+}
+
+h3 {
+    font-family: 'Cormorant';
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--fourth_blue);
 }
 
 .about_content {
@@ -47,9 +54,6 @@ h2 {
     gap: 1rem;
 }
 
-.about_content a {
-    text-decoration: none;
-}
 .right_bar .section {
     width: 80%;
     text-align: justify;
@@ -74,10 +78,20 @@ h2 {
 .about_subheading b {
     font-family: 'Manrope';
     text-transform: uppercase;
-    color: var(--seventh_blue);
+    color: var(--eight_blue);
     font-weight: 500;
     font-size: 1rem;
     letter-spacing: 0.2rem;
+}
+
+.education {
+    font-family: 'Manrope';
+    color: var(--b_black);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.about_text {
+    font-family: 'Manrope';
 }
 section {
     display: block;
