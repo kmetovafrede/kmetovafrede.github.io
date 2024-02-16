@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cormorant', sans-Light 300;
+    font-family: 'Cormorant', serif;
     scroll-behavior: smooth;
+}
+
+body {
+    background-color: #97b3ff;
 }
