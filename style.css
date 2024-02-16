@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Helvetica', serif;
     scroll-behavior: smooth;
 }
 
-.header h1 {
+body {
     color: #4c629c;
-    font-family: 'Helvetica', serif;
 }
 
 .header {
