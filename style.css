@@ -217,6 +217,13 @@ h3 {
     width: 80%;
     text-align: justify;
 }
+.footer {
+    width: 80%;
+    text-align: justify;
+    padding: 0;
+    margin-top: 20px;
+}
+
 
 @media screen and (max-width: 600px) {
     body {
@@ -229,6 +236,12 @@ h3 {
         margin-right: auto; 
     }
     .bottom .contents {
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .footer {
         width: 80%; 
         margin-left: auto; 
         margin-right: auto; 
