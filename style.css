@@ -50,7 +50,6 @@ h3 {
 }
 
 .about {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -125,11 +124,51 @@ h3 {
     overflow: hidden;
 }
 
-/* section {
-    display: block;
-} */
+.container .nav_bar {
+    background-color: var(--first_blue);
+    width: 100%; 
+    height: 100px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; 
+}
 
-/* .right_bar .section {
+.logo {
+    width: 200px; 
+    height: 50px; 
+    margin-top: 20px; 
+    margin-left: 20px;
+    transition: width 0.3s, height 0.3s; 
+}
+
+.logo:hover {
+    width: 230px; 
+    height: 60px;
+}
+
+.bottom .section {
     width: 80%;
     text-align: justify;
+    margin-top: 120px;
+}
+.mobile_name {
+    display: none;
+}
+.mobile_lines {
+    display: none;
+}
+
+/* style for 'hamburger' icon
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
 } */
+section {
+    display: block;
+} 
