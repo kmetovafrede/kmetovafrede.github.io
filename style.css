@@ -141,7 +141,7 @@ h3 {
     height: 60px;
 }
 
-.dropbtn {
+.menu_button {
     background-color: transparent;
     color: rgb(0, 0, 0);
     padding: 16px;
@@ -154,12 +154,12 @@ h3 {
     z-index: 2;
 }
 
-.dropdown {
+.menu {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-content {
+.menu_content {
     position: fixed;
     top: 0;
     right: -200px; 
@@ -170,11 +170,11 @@ h3 {
     z-index: 2;
 }
 
-.dropdown:hover .dropdown-content {
+.menu:hover .menu_content {
     right: 0; 
 }
 
-.dropdown-content a {
+.menu_content a {
     font-family: 'Cormorant';
     font-weight: bold;
     color: var(--b_black);
@@ -183,13 +183,13 @@ h3 {
     display: flex;
     justify-content: center;
 }
-.dropdown .dropbtn {
+.menu .menu_button {
     background-color: transparent;
     border: none;
     padding: 0;
 }
 
-.dropdown-icon {
+.menu_icon {
     width: 70px; 
     height: 40px; 
 }
