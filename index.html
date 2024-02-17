@@ -6,12 +6,13 @@ ITW druhý projekt
 <!DOCTYPE html>
 <html lang="sk">
 <head>
+    <meta charset="utf-8">
     <title>Frederika Kmeťová</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-	  <meta charset="utf-8">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -25,7 +26,7 @@ ITW druhý projekt
                 <button class="menu_button">
                     <img src="img/menu.png" alt="menu" class="menu_icon">
                 </button>
-                <div class="menu_content">
+                <div class="menu_content" id="menu_hide">
                     <a href="#section_about"> O mne </a>
                     <a href="#section_education"> Vzdelanie </a>
                     <a href="#section_experience"> Pracovné skúsenosti </a>
@@ -64,9 +65,7 @@ ITW druhý projekt
             </p>
         </div>
         </section>
-    </div>
-    <br><br>
-        <section class="section" id="section_education">
+        <section class="contents" id="section_education">
             <h2>Vzdelanie</h2>
                 <div class="education">
                     <h3>Stredná škola</h3>
@@ -79,8 +78,7 @@ ITW druhý projekt
                     <p>2021</p>
                 </div>
         </section>
-        <br><br>
-        <section class="section" id="section_experience">
+        <section class="contents" id="section_experience">
             <h2>Pracovné skúsenosti</h2>
                 <div class="experience">
                     <h3>Administrátor</h3>
@@ -103,18 +101,16 @@ ITW druhý projekt
                     <p>2019</p>
                 </div>
         </section>
-        <br><br>
-        <section>
+        <section class="contents" id="section_languages">
             <h2>Jazykové znalosti</h2>
-                <div class="languages" id="section_languages">
+                <div class="languages">
                     <p>Anglický jazyk - C1</p>
                     <p>Taliansky jazyk - B2</p>
                 </div>
         </section>
-        <br><br>
-        <section>
+        <section class="contents" id="section_socials">
             <h2>Kde ma nájdete?</h2>
-            <div class="socials" id="section_socials">
+            <div class="socials">
                 <a class="icon" href="https://github.com/kmetovafrede">
                     <img src="img/github.png" alt="Github"></a>
                 <a class="icon" href="https://www.linkedin.com/in/kmetovaf/">
@@ -126,11 +122,9 @@ ITW druhý projekt
             </div>
         </section>
     </div>
-    <br>
+    <script src="script.js"></script>
+</body>
     <footer>
         <p> 2023 &copy; Frederika Kmeťová</p>
     </footer>
-</body>
-
-
-
+</html>

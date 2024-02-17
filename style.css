@@ -21,11 +21,12 @@ ITW druhý projekt
     --seventh_blue: #112d68;
     --eight_blue: #1E2338;
     --b_black: #000000;
+    --w_white: #e7eff9;
 }
 
 body {
-    background-color: --second_blue;
-    padding-left: 10rem;
+    background-color: var(--w_white);
+    padding-left: 5rem;
 }
 
 h1 {
@@ -65,7 +66,7 @@ h3 {
 }
 
 .about_subheading a {
-    color: var(b_black);
+    color: var(--b_black);
     text-decoration: underline;
     font-size: normal;
     letter-spacing: 0;
@@ -143,7 +144,7 @@ h3 {
 
 .menu_button {
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: var(--b_black);
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -183,6 +184,7 @@ h3 {
     display: flex;
     justify-content: center;
 }
+
 .menu .menu_button {
     background-color: transparent;
     border: none;
@@ -194,28 +196,49 @@ h3 {
     height: 40px; 
 }
 
+.section {
+    margin: 0;
+    padding: 0;
+    margin-top: 120px;
+}
+.contents {
+    margin:0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.bottom .contents {
+    padding: 0;
+    text-align: justify;
+    width: 80%;
+}
+
 .bottom .section {
     width: 80%;
     text-align: justify;
-    margin-top: 120px;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        padding-left: 0; 
+    }
+    .bottom .section {
+        width: 80%; 
+        margin-top: 100px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+    .bottom .contents {
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+}
+
 .mobile_name {
     display: none;
 }
+
 .mobile_lines {
     display: none;
 }
-
-/* style for 'hamburger' icon
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #101010;
-} */
-section {
-    display: block;
-} 
