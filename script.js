@@ -22,3 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function flipCard(card) {
+    card.classList.toggle("card-flipped");
+}
+function toggleDropdown(card) {
+    card.classList.toggle('card-flipped');
+}
