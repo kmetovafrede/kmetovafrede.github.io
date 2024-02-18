@@ -3,25 +3,33 @@
 // 2023/2024
 // .js file
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuContent = document.querySelector('.menu_content');
-    menuContent.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            menuContent.style.right = '-200px';
-        });
-    });
-    
-    const menuButton = document.querySelector('.menu_button');
-    menuButton.addEventListener('click', () => {
-        if (menuContent.style.right === '0px') {
-            // If menu is open, close it
-            menuContent.style.right = '-200px';
-        } else {
-            // If menu is closed, open it
-            menuContent.style.right = '0px';
-        }
-    });
-});
+// Function to handle click events
+function toggleMenu(event) {
+    var menu = document.querySelector('.menu_content');
+    var menuButton = document.querySelector('.menu_button');
+
+    // Check if the clicked element is inside the menu or the menu button
+    var isClickInsideMenu = menu.contains(event.target) || menuButton.contains(event.target);
+
+    // If the click is not inside the menu or menu button, close the menu
+    if (!isClickInsideMenu) {
+        menu.style.right = '-200px';
+    }
+}
+
+// Event listener for click events on the document
+document.addEventListener('click', toggleMenu);
+
+// Function to toggle the menu when clicked
+function toggleMenuVisibility() {
+    var menu = document.querySelector('.menu_content');
+    menu.style.right = menu.style.right === '-200px' ? '0' : '-200px';
+}
+
+// Event listener for click events on the menu button
+var menuButton = document.querySelector('.menu_button');
+menuButton.addEventListener('click', toggleMenuVisibility);
+
 
 function flipCard(card) {
     card.classList.toggle("card-flipped");
@@ -37,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Hide the entire page content, including background image and footer initially
-    document.body.style.backgroundImage = "none"; // Fix here
-
+    document.querySelector("body").style.backgroundImage = "none";
     var container = document.querySelector(".container");
     container.style.display = "none";
     container.style.opacity = "0"; 
@@ -54,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         container.style.display = "block";
         footer.style.display = "block";
-        document.body.style.backgroundImage = "url('img/background.jpg')"; // Show the background image
+        document.querySelector("body").style.backgroundImage = "url('img/background.jpg')"; // Show the background image
 
         // Trigger CSS animation to fade in the content
         container.style.animation = "fadeIn 1s ease-in-out"; // Smooth transition with ease-in-out timing function
@@ -65,3 +72,4 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.opacity = "1"; 
     }, 3800); // TODO 3800 seconds are top
 });
+

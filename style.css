@@ -84,14 +84,13 @@ h3 {
 }
 
 .flashcard {
-    width: 100%; /* Adjust the width as needed */
+    width: 100%;
     padding: 20px;
-    position: relative; /* Add position relative to contain absolute positioned elements */
+    position: relative; 
     background-color: var(--third_blue);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
-    margin: 0 auto; /* Centers the flashcard horizontally */
-    overflow: hidden; /* Clear floats */
-}
+    margin: 0 auto; 
+    overflow: hidden; }
 
 .flashcard p {
     margin-bottom: 0;
@@ -103,19 +102,19 @@ h3 {
 }
 
 .flashcard .image-wrapper {
-    float: left; /* Float the image to the left */
-    margin-right: 30px; /* Add some margin to the right of the image */
+    float: left; 
+    margin-right: 30px; 
 }
 
 .flashcard .image-wrapper img {
-    width: 130px; /* Adjust the width of the image */
+    width: 130px; 
     height: auto;
-    border-radius: 20%; /* Optional: If you want rounded corners */
+    border-radius: 20%; 
 }
 
 .flashcard .content {
-    margin-top: 50px; /* Adjust as needed to make space for the image */
-    overflow: hidden; /* Clear floats */
+    margin-top: 50px; 
+    overflow: hidden; 
 }
 
 .section {
@@ -153,7 +152,7 @@ h3 {
 
 .socials {
     display: flex;
-    justify-content: center; /* Align items horizontally to the center */
+    justify-content: center; 
     gap: 1rem;
     margin-top: 0.5rem;
 }
@@ -226,10 +225,6 @@ h3 {
     z-index: 2;
 }
 
-.menu:hover .menu_content {
-    right: 0; 
-}
-
 .menu_content a {
     font-family: 'Cormorant';
     font-weight: bold;
@@ -275,7 +270,6 @@ h3 {
 .card {
     width: 200px;
     height: 200px;
-    position: relative;
     cursor: pointer;
     margin-top: 70px;
     perspective: 1000px; /* 3D effect */
@@ -300,7 +294,7 @@ h3 {
 }
 
 .card-flipped .card-back {
-    transform: rotateY(0deg); /* Rotate the back card back to its original position */
+    transform: rotateY(0deg); 
 }
 
 .card-front,
@@ -314,7 +308,7 @@ h3 {
     align-items: center;
     border-radius: 20%;
     transition: transform 1.5s ease;
-    z-index: 2; /* Ensure the front is on top */
+    z-index: 2; 
 }
 
 .card-front {
@@ -336,41 +330,94 @@ h3 {
 
 .dropdown-content {
     position: absolute;
+    padding: 20px;
     top: 0;
-    left: 200px;
-    padding: 0;
-    width: 0;
-    height: auto;
+    left: 100px; 
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    text-align: center;
     background-color: var(--first_blue);
-    overflow: hidden; 
-    transition: width 0.8s ease, left 0.8s ease; 
+    opacity: 0; 
+    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.second-dropdown-content {
+    position: absolute;
+    padding: 20px;
+    top: 0;
+    left: 100px; 
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    text-align: center;
+    background-color: var(--first_blue);
+    opacity: 0;
+    transition: opacity 0.8s ease-out, left 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
 .card-flipped .dropdown-content {
-    width: 200px; 
-    left: 200px; 
-    margin-top: 20px;
-    border-radius: 10%;
+    opacity: 1; 
+    left: calc(100% + 10px); 
+    border-radius: 20%;
     mix-blend-mode: lighten;
 }
 
-.dropdown-left-content {
-    position: absolute;
-    top: 0;
-    right: 200px;
-    padding: 0;
-    width: 0;
-    height: auto;
-    background-color: var(--first_blue);
-    overflow: hidden;
-    transition: width 0.8s ease, right 0.8s ease; 
+.card-flipped .second-dropdown-content {
+    opacity: 1;
+    left: calc(145% + 130px); 
+    border-radius: 20%;
+    mix-blend-mode: lighten;
 }
 
-.card-flipped .dropdown-left-content {
+/* First left dropdown */
+.dropdown-left-content {
+    position: absolute;
+    padding: 20px;
+    left: -200px; 
     width: 200px; 
-    right: 200px; 
-    margin-top: 20px;
-    border-radius: 10%;
+    height: 200px;
+    border-radius: 20px; 
+    background-color: var(--first_blue);
+    opacity: 0; 
+    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
+}
+
+/* Second left dropdown */
+.second-dropdown-left-content {
+    position: absolute;
+    padding: 20px;
+    left: -200px;
+    width: 200px; 
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--first_blue);
+    opacity: 0; 
+    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
+    
+}
+
+/* Flipped state for the first dropdown */
+.card-flipped .dropdown-left-content {
+    opacity: 1; 
+    left: calc(-160% + 110px); 
+    border-radius: 20px;
+    mix-blend-mode: lighten;
+}
+
+/* Flipped state for the second dropdown */
+.card-flipped .second-dropdown-left-content {
+    opacity: 1; 
+    left: calc(-265% + 110px); 
+    border-radius: 20px; 
     mix-blend-mode: lighten;
 }
 
@@ -440,7 +487,7 @@ h3 {
     }
     
 }
-/* Initially hide the webpage content */
+/* Hiding webpage for loader */
 .container {
     display: none;
 }
@@ -465,16 +512,18 @@ body {
 }
 
 .loader-container {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0;
+    transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .loader {
-    margin-right: 30px; 
+    margin-right: 20px;
 }
 
 .coffee-loader {
@@ -490,7 +539,7 @@ body {
     content: '';
     box-sizing: border-box;
     position: absolute;
-    left: 45px;
+    left: 40px;
     top: 8px;
     border: 4px solid #000000;
     width: 16px;
@@ -533,6 +582,7 @@ body {
     white-space: nowrap;
     color: #0000;
     animation: l19 2s infinite linear;
+    position: relative;
 }
 
 .loading-text-loader:before {
