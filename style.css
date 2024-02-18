@@ -27,8 +27,7 @@ ITW druhý projekt
 body {
     background-image: url('img/background.jpg');
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    padding: 5rem;
 }
 
 h1 {
@@ -169,9 +168,10 @@ h3 {
     transform: scale(1.2); 
 }
 
+.review 
+
 .container {
     margin: 0 auto;
-    max-width: 1200px; 
 }
 
 .container .nav_bar {
@@ -270,7 +270,6 @@ h3 {
 
 .card-container {
     position: relative;
-    display: inline-block;
 }
 
 .card {
@@ -279,17 +278,19 @@ h3 {
     position: relative;
     cursor: pointer;
     margin-top: 70px;
-    perspective: 1000px; /* Add perspective to create the 3D effect */
+    perspective: 1000px; /* 3D effect */
 }
 
+/* first */
 .card:nth-child(1) {
     margin-right: auto; 
 }
-
+/* last */
 .card:nth-child(3) {
-    margin-left: auto;
+    margin-right: auto;
 }
 
+/* middle */
 .card:nth-child(2) {
     margin-left: auto; 
 }
@@ -323,14 +324,14 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: rotateY(0deg); /* Initially not rotated */
+    transform: rotateY(0deg); 
 }
 
 .card-back {
     background-color: var(--fourth_blue);
     border-radius: 20%;
-    z-index: 1; /* Ensure the back is behind the front */
-    transform: rotateY(180deg); /* Initially flipped */
+    z-index: 1; 
+    transform: rotateY(180deg); 
 }
 
 .dropdown-content {
@@ -341,18 +342,37 @@ h3 {
     width: 0;
     height: auto;
     background-color: var(--first_blue);
-    overflow: hidden; /* Hide overflow */
-    transition: width 0.8s ease, left 0.8s ease; /* Smooth transition for width and left */
+    overflow: hidden; 
+    transition: width 0.8s ease, left 0.8s ease; 
 }
 
 .card-flipped .dropdown-content {
-    width: 200px; /* Expanded width */
-    left: 200px; /* Move the dropdown content into view */
+    width: 200px; 
+    left: 200px; 
     margin-top: 20px;
     border-radius: 10%;
     mix-blend-mode: lighten;
 }
 
+.dropdown-left-content {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    padding: 0;
+    width: 0;
+    height: auto;
+    background-color: var(--first_blue);
+    overflow: hidden;
+    transition: width 0.8s ease, right 0.8s ease; 
+}
+
+.card-flipped .dropdown-left-content {
+    width: 200px; 
+    right: 200px; 
+    margin-top: 20px;
+    border-radius: 10%;
+    mix-blend-mode: lighten;
+}
 
 
 
@@ -373,7 +393,7 @@ h3 {
 
 @media screen and (max-width: 600px) {
     body {
-        padding-left: 0; 
+        padding: 0; 
     }
     .bottom .section {
         width: 80%; 
@@ -391,8 +411,16 @@ h3 {
         margin-left: auto; 
         margin-right: auto; 
     }
+    .loader-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        margin-left: 10%; 
+    }
 }
-
 .mobile_name {
     display: none;
 }
@@ -400,3 +428,180 @@ h3 {
 .mobile_lines {
     display: none;
 }
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+/* Initially hide the webpage content */
+.container {
+    display: none;
+}
+.container,
+.footer {
+    display: none;
+    transition: opacity 2s ease-in-out;
+}
+.loaded .container,
+.loaded .footer {
+    display: block;
+}
+
+/* Hide the background image initially */
+body {
+    background-image: none; 
+    transition: opacity 5s ease-in-out;
+}
+.loaded body {
+    background-image: url('img/background.jpg'); 
+    opacity: 1; 
+}
+
+.loader-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.loader {
+    margin-right: 30px; 
+}
+
+.coffee-loader {
+    width: 48px;
+    height: 40px;
+    background: #000000;
+    border-radius: 15% 15% 35% 35%;
+    display: inline-block;
+    position: relative;
+}
+
+.coffee-loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 45px;
+    top: 8px;
+    border: 4px solid #000000;
+    width: 16px;
+    height: 20px;
+    border-radius: 0 4px 4px 0;
+}
+
+.coffee-loader::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    color: #000000;
+    top: -15px;
+    left: 11px;
+    animation: animloader 2s infinite linear;
+}
+
+@keyframes animloader {
+    0% {
+        box-shadow: 2px 0px rgba(0, 0, 0, 0), 12px 0px rgba(0, 0, 0, 0.3), 20px 0px rgba(0, 0, 0, 0);
+    }
+    50% {
+        box-shadow: 2px -5px rgba(0, 0, 0, 0.5), 12px -3px rgba(0, 0, 0, 0.5), 20px -2px rgba(0, 0, 0, 0.6);
+    }
+    100% {
+        box-shadow: 2px -8px rgba(0, 0, 0, 0), 12px -5px rgba(0, 0, 0, 0), 20px -5px rgba(0, 0, 0, 0);
+    }
+}
+
+.loading-text-loader {
+    --w: 10ch;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    line-height: 1.2em;
+    letter-spacing: var(--w);
+    width: var(--w);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #0000;
+    animation: l19 2s infinite linear;
+}
+
+.loading-text-loader:before {
+    content: "Frede...";
+}
+  
+  @keyframes l19 {
+     0% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+     4% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+     8% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    12% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    16% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    20% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    24% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    28% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    32% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+    36% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0}
+    40%,
+    60% {text-shadow: 
+          calc( 0*var(--w)) 0 #000,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    64% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0 #000,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    68% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0 #000,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    72% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0 #000,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    76% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0 #000, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    80% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0 #000,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    84% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0 #000,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    88% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0 #000,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    92% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0 #000,calc(-9*var(--w)) 0 #000}
+    96% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0 #000}
+    100% {text-shadow: 
+          calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
+          calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
+  } 

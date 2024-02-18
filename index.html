@@ -14,6 +14,16 @@ ITW druhý projekt
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
+<div class="loader-container">
+    <!-- Coffee Loader -->
+    <div class="loader coffee-loader">
+        <div class="coffee-icon"></div>
+    </div>
+    <!-- Loading Text Loader -->
+    <div class="loader loading-text-loader">
+        <div class="loading-text"></div>
+    </div>
+</div>
 <body>
     <div class="container">
         <nav class="nav_bar">
@@ -32,6 +42,7 @@ ITW druhý projekt
                     <a href="#section_experience"> Pracovné skúsenosti </a>
                     <a href="#section_languages"> Jazykové znalosti </a>
                     <a href="#section_socials"> Kontakt </a>
+                    <a href="#section_review"> Recenzie </a>
                 </div>
             </div>
             <div class="mobile_lines">
@@ -69,7 +80,7 @@ ITW druhý projekt
                     </div>
                 </div>
                 </section>
-                <div class="card_container">
+                <div class="card-container">
                     <div class="card" onclick="flipCard(this)">
                         <div class="card-front">
                             <section class="contents" id="section_education">
@@ -96,14 +107,12 @@ ITW druhý projekt
                             </div>
                         </div>
                     </div>
-                </div>
                 
-                    
                     <div class="card" onclick="flipCard(this)">
                         <div class="card-front">
                             <section class="contents" id="section_experience">
                                 <img src="img/worker.png" alt="Education" class="icon" width="100" height="100">
-                                <!-- <h2>Pracovné skúsenosti</h2> -->
+                                
                             </section>
                         </div>
                         <div class="card-back">
@@ -111,33 +120,36 @@ ITW druhý projekt
                                 <h2>Pracovné skúsenosti</h2>
                             </section>
                         </div>
-                        <!-- <div class="experience">
-                            <h3>Administrátor</h3>
-                            <p>MUZIKER, a.s., Bratislava</p>
-                            <p>2016 - 2018</p>
+                        <div class="card" onclick="toggleDropdown(this)">
+                            <div class="dropdown-content">
+                                <div class="experience">
+                                    <h3>Administrátor</h3>
+                                    <p>MUZIKER, a.s., Bratislava</p>
+                                    <p>2016 - 2018</p>
+                                </div>
+                                <div class="experience">
+                                    <h3>Barista</h3>
+                                    <p>Frutissimo, Bratislava</p>
+                                    <p>2018 - 2019</p>
+                                </div>
+                                <div class="experience">
+                                    <h3>Asistent</h3>
+                                    <p>Sportsdirect, Bratislava</p>
+                                    <p>2019 - 2021</p>
+                                </div>
+                                <div class="experience">
+                                    <h3>Lektor</h3>
+                                    <p>Class language school, Bratislava</p>
+                                    <p>2019</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="experience">
-                            <h3>Barista</h3>
-                            <p>Frutissimo, Bratislava</p>
-                            <p>2018 - 2019</p>
-                        </div>
-                        <div class="experience">
-                            <h3>Asistent</h3>
-                            <p>Sportsdirect, Bratislava</p>
-                            <p>2019 - 2021</p>
-                        </div>
-                        <div class="experience">
-                            <h3>Lektor</h3>
-                            <p>Class language school, Bratislava</p>
-                            <p>2019</p>
-                        </div> -->
                     </div>
                     
                     <div class="card" onclick="flipCard(this)">
                         <div class="card-front">
                             <section class="contents" id="section_languages">
                                 <img src="img/languages.png" alt="Education" class="icon" width="100" height="100">
-                                <!-- <h2>Jazykové znalosti</h2> -->
                             </section>
                         </div>
                         <div class="card-back">
@@ -145,12 +157,16 @@ ITW druhý projekt
                                 <h2>Jazykové znalosti</h2>
                             </section>
                         </div>
-                        <!-- <div class="languages">
-                            <p>Anglický jazyk - C1</p>
-                            <p>Taliansky jazyk - B2</p>
-                        </div> -->
+                        <div class="card" onclick="toggleDropdown(this)">
+                            <div class="dropdownn-content">
+                                <div class="languages">
+                                    <p>Anglický jazyk - C1</p>
+                                    <p>Taliansky jazyk - B2</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>   
-                </div>             
+                </div>
                 <section class="contents" id="section_socials">
                     <h2>Kde ma nájdete?</h2>
                     <div class="socials">
@@ -164,14 +180,21 @@ ITW druhý projekt
                             <img src="img/facebook.png" alt="Facebook"></a> -->
                     </div>
                 </section>
-            </div>
+                <!-- <section class="contents" id="section_review">
+                    <h2>Recenzie</h2>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img src="img/anonymous.png" alt="Anonymous" class="icon" width="100" height="100">
+                        </div>
+                    </div>
+                </section>   -->
         </div>
+    </div>
     <script src="script.js"></script>
-</div>
+<footer>
+    <section class="footer" id="footer">
+            <p> 2024 &copy; Frederika Kmeťová</p>
+    </section>
+</footer>
 </body>
-    <footer>
-        <section class="footer" id="footer">
-                <p> 2024 &copy; Frederika Kmeťová</p>
-        </section>
-    </footer>
 </html>
