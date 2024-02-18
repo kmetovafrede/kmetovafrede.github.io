@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Hide the entire page content, including background image and footer initially
-    document.querySelector("body").style.backgroundImage = "none";
+    document.body.style.backgroundImage = "none"; // Fix here
+
     var container = document.querySelector(".container");
     container.style.display = "none";
     container.style.opacity = "0"; 
@@ -53,15 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         container.style.display = "block";
         footer.style.display = "block";
-        document.querySelector("body").style.backgroundImage = "url('img/background.jpg')"; // Show the background image
+        document.body.style.backgroundImage = "url('img/background.jpg')"; // Show the background image
 
         // Trigger CSS animation to fade in the content
         container.style.animation = "fadeIn 1s ease-in-out"; // Smooth transition with ease-in-out timing function
         container.style.opacity = "1"; // Set opacity to 1 after animation
         footer.style.animation = "fadeIn 1s ease-in-out"; 
         footer.style.opacity = "1"; 
-        body.style.animation = "fadeIn 1s ease-in-out"; 
-        body.style.opacity = "1"; 
+        document.body.style.animation = "fadeIn 1s ease-in-out"; 
+        document.body.style.opacity = "1"; 
     }, 3800); // TODO 3800 seconds are top
 });
-

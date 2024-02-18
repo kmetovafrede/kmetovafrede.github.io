@@ -391,7 +391,7 @@ h3 {
 
 /*              Phone                */
 
-@media screen and (max-width: 600px) {
+@media screen {
     body {
         padding: 0; 
     }
