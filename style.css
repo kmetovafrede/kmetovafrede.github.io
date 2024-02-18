@@ -437,7 +437,6 @@ h3 {
 }
 
 /*              Phone                */
-
 @media screen {
     body {
         padding: 0; 
@@ -468,6 +467,7 @@ h3 {
         margin-left: 10%; 
     }
 }
+
 .mobile_name {
     display: none;
 }
