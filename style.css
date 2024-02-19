@@ -729,3 +729,39 @@ body {
     }
 }
 
+#reviewForm {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: var(--second_blue);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#reviewForm label {
+    font-weight: bold;
+}
+
+#reviewForm input[type="text"],
+#reviewForm input[type="number"],
+#reviewForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid --sixth_blue;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#reviewForm button {
+    background-color: var(--first_blue);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reviewForm button:hover {
+    background-color: #6845a0;
+}

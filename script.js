@@ -81,6 +81,25 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 3800); // TODO 3800 seconds are top
+    }, 1); // TODO 3800 seconds are top
 });
 
+document.getElementById("reviewForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    console.log("Form submission intercepted.");
+    
+    var formData = new FormData(this);
+    console.log("Form data:", formData);
+    
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "submit_review.php", true);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            alert("Review submitted successfully!");
+            document.getElementById("reviewForm").reset();
+        } else {
+            alert("Error submitting review. Please try again later.");
+        }
+    };
+    xhr.send(formData);
+});
