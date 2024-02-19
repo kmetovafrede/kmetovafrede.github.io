@@ -1,3 +1,8 @@
+ <!-- Frederika Kmeťová
+ ITW druhý projekt
+ 2023/2024
+ .js file -->
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
@@ -16,3 +21,5 @@ if (mail($to, $subject, $message, $headers)) {
     echo 'Error sending test email.';
 }
 ?>
+
+
