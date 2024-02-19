@@ -754,7 +754,7 @@ body {
 }
 
 #reviewForm button {
-    background-color: var(--first_blue);
+    background-color: var(--fourth_blue);
     color: rgb(0, 0, 0);
     padding: 10px 20px;
     border: none;
