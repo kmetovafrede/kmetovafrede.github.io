@@ -12,20 +12,24 @@ ITW druhý projekt
 }
 
 :root {
-    --first_blue: #cfe0f0;
-    --second_blue: #c2dcf2;
-    --third_blue: #a4c4e0;
-    --fourth_blue: #7d95b9;
-    --fifth_blue: #4f5ea8;
-    --sixth_blue: #304674;
-    --seventh_blue: #112d68;
-    --eight_blue: #1E2338;
+    --first_blue: #9bc0ec;
+    --second_blue: #7dace7;
+    --third_blue: #5f99e1;
+    --fourth_blue: #4186dc;
+    --fifth_blue: #1b5296;
+    --sixth_blue: #164278;
+    --seventh_blue: #10315a;
+    --eight_blue: #0b213c;
+    --ninth_blue: #465ab6;
+    --tenth-blue: #20337f;
+    --eleventh-blue: #101e56;
+    --twelfth-blue: #060a26;
+    --thirteenth-blue-light: #90a3f7;
     --b_black: #000000;
-    --w_white: #e7eff9;
+    --w_white: #ffffff;
 }
 
 body {
-    background-image: url('img/background.jpg');
     background-size: cover;
     padding-top: 5rem;
     padding-left: 5rem;
@@ -36,21 +40,21 @@ h1 {
     margin-top: 0;
     font-weight: 600;
     font-size: 2.5rem;
-    color: var(--sixth_blue);
+    color: var(--first_blue);
     text-transform: uppercase;
 }
 
 h2 {
     font-size: 1.3rem;
     text-transform: uppercase;
-    color: var(--fifth_blue);
+    color: var(--first_blue);
 }
 
 h3 {
     font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
-    color: var(--fourth_blue);
+    color: var(--tenth-blue);
 }
 
 .about {
@@ -78,46 +82,40 @@ h3 {
     text-align: center;
 }
 
-.about_body {
-    color: var(--b_black);
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.4rem;
-}
-
 .flashcard {
-    width: 100%;
-    padding: 20px;
     position: relative; 
-    background-color: var(--third_blue);
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
+    padding: 20px;
     margin: 0 auto; 
     overflow: hidden; 
+}
+
+.flashcard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ninth_blue);
+    mix-blend-mode: screen; 
+    z-index: -1; 
 }
 
 .flashcard p {
     margin-bottom: 0;
     font-size: 1rem;
     line-height: 1.4rem;
-    color: var(--b_black);
+    color: black; 
     font-weight: 500;
     text-align: justify;
-}
-
-.flashcard .image-wrapper {
-    float: left; 
-    margin-right: 30px; 
 }
 
 .flashcard .image-wrapper img {
     width: 130px; 
     height: auto;
     border-radius: 20%; 
-}
-
-.flashcard .content {
-    margin-top: 50px; 
-    overflow: hidden; 
+    float: left; 
+    margin-right: 30px; 
 }
 
 .section {
@@ -126,28 +124,26 @@ h3 {
     margin-top: 120px;
     position: center;
 }
-.flashcard::after {
+
+/* .flashcard::after {
     content: "";
     display: table;
     clear: both;
-}
+} */
 
 .education {
-    color: var(--b_black);
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
 }
 
 .experience {
-    color: var(--b_black);
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
 }
 
 .languages {
-    color: var(--b_black);
     font-weight: 600;
     font-size: 1rem;
     text-align: center;
@@ -161,13 +157,14 @@ h3 {
 }
 
 .socials a img {
+    margin-top: 0.5rem;
     width: 40px;
     height: 40px;
     transition: transform 0.3s;
 }
 
 .socials a:hover img {
-    transform: scale(1.2); 
+    transform: scale(1.7); 
 }
 
 .container {
@@ -181,7 +178,8 @@ h3 {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999;
+    opacity: 0.5;
 }
 
 .logo {
@@ -190,6 +188,7 @@ h3 {
     margin-top: 10px; 
     margin-left: 10px;
     transition: width 0.3s, height 0.3s; 
+    z-index: 9999;
 }
 
 .logo:hover {
@@ -245,12 +244,14 @@ h3 {
 .menu_icon {
     width: 70px; 
     height: 40px; 
+    z-index: 9999;
 }
 
 .contents {
     margin:0;
     padding: 0;
     text-align: center;
+    z-index: 1;
 }
 
 .find_me {
@@ -272,6 +273,7 @@ h3 {
 
 .card-container {
     position: relative;
+    mix-blend-mode: screen;
 }
 
 .card {
@@ -319,7 +321,7 @@ h3 {
 }
 
 .card-front {
-    background-color: var(--third_blue);
+    background-color: var(--ninth_blue);
     border-radius: 20%;
     display: flex;
     flex-direction: column;
@@ -329,29 +331,13 @@ h3 {
 }
 
 .card-back {
-    background-color: var(--fourth_blue);
+    background-color: var(--tenth-blue);
     border-radius: 20%;
     z-index: 1; 
     transform: rotateY(180deg); 
 }
 
-.dropdown-content {
-    position: absolute;
-    padding: 20px;
-    top: 0;
-    left: 100px; 
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    text-align: center;
-    background-color: var(--first_blue);
-    opacity: 0; 
-    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
+.dropdown-content,
 .second-dropdown-content {
     position: absolute;
     padding: 20px;
@@ -361,9 +347,9 @@ h3 {
     height: 200px;
     border-radius: 20%;
     text-align: center;
-    background-color: var(--first_blue);
-    opacity: 0;
-    transition: opacity 0.8s ease-out, left 0.8s ease-out;
+    background-color: var(--second_blue);
+    opacity: 0; 
+    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,43 +370,35 @@ h3 {
 }
 
 /* First left dropdown */
-.dropdown-left-content {
+.dropdown-left-content,
+.second-dropdown-left-content  {
     position: absolute;
     padding: 20px;
+    top: 0;
     left: -200px; 
-    width: 200px; 
+    width: 200px;
     height: 200px;
-    border-radius: 20px; 
-    background-color: var(--first_blue);
-    opacity: 0; 
-    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
-}
-
-/* Second left dropdown */
-.second-dropdown-left-content {
-    position: absolute;
-    padding: 20px;
-    left: -200px;
-    width: 200px; 
-    height: 200px;
-    border-radius: 20px;
-    background-color: var(--first_blue);
-    opacity: 0; 
-    transition: opacity 0.8s ease-out, left 0.8s ease-out; 
-    
+    border-radius: 20%;
+    text-align: center;
+    background-color: var(--second_blue);
+    opacity: 0;
+    transition: opacity 0.8s ease-out, left 0.8s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .card-flipped .dropdown-left-content {
     opacity: 1; 
     left: calc(-265% + 110px); 
-    border-radius: 20px;
+    border-radius: 30px;
     mix-blend-mode: lighten;
 }
 
 .card-flipped .second-dropdown-left-content {
     opacity: 1; 
     left: calc(-160% + 110px); 
-    border-radius: 20px; 
+    border-radius: 30px; 
     mix-blend-mode: lighten;
 }
 
@@ -469,7 +447,7 @@ body {
 }
 
 .loaded body {
-    background-image: url('img/background.jpg'); 
+    background-image: url('img/satin_wallpaper2.jpg'); 
     opacity: 1; 
 }
 

@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         container.style.display = "block";
         footer.style.display = "block";
-        document.querySelector("body").style.backgroundImage = "url('img/background.jpg')"; // Show the background image
+        document.querySelector("body").style.backgroundImage = "url('img/satin_wallpaper2.jpg')"; // Show the background image
 
         // Trigger CSS animation to fade in the content
         container.style.animation = "fadeIn 1s ease-in-out"; // Smooth transition with ease-in-out timing function
@@ -74,6 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 1); // TODO 3800 seconds are top
+    }, 3800); // TODO 3800 seconds are top
 });
 
