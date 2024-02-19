@@ -27,7 +27,9 @@ ITW druhý projekt
 body {
     background-image: url('img/background.jpg');
     background-size: cover;
-    padding: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 h1 {
@@ -424,7 +426,6 @@ h3 {
 
 .footer {
     text-align: justify;
-    padding: 0;
     margin-top: 30px;
     text-align: center;
 }
