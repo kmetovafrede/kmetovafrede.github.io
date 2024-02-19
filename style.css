@@ -90,7 +90,8 @@ h3 {
     background-color: var(--third_blue);
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8);
     margin: 0 auto; 
-    overflow: hidden; }
+    overflow: hidden; 
+}
 
 .flashcard p {
     margin-bottom: 0;
@@ -126,7 +127,7 @@ h3 {
 .flashcard::after {
     content: "";
     display: table;
-    clear: both; /* Clear the float */
+    clear: both;
 }
 
 .education {
@@ -166,8 +167,6 @@ h3 {
 .socials a:hover img {
     transform: scale(1.2); 
 }
-
-.review 
 
 .container {
     margin: 0 auto;
@@ -248,6 +247,12 @@ h3 {
 
 .contents {
     margin:0;
+    padding: 0;
+    text-align: center;
+}
+
+.find_me {
+    margin: 0;
     padding: 0;
     text-align: center;
 }
@@ -362,8 +367,6 @@ h3 {
     justify-content: center;
 }
 
-
-
 .card-flipped .dropdown-content {
     opacity: 1; 
     left: calc(100% + 10px); 
@@ -405,23 +408,19 @@ h3 {
     
 }
 
-/* Flipped state for the first dropdown */
 .card-flipped .dropdown-left-content {
     opacity: 1; 
-    left: calc(-160% + 110px); 
+    left: calc(-265% + 110px); 
     border-radius: 20px;
     mix-blend-mode: lighten;
 }
 
-/* Flipped state for the second dropdown */
 .card-flipped .second-dropdown-left-content {
     opacity: 1; 
-    left: calc(-265% + 110px); 
+    left: calc(-160% + 110px); 
     border-radius: 20px; 
     mix-blend-mode: lighten;
 }
-
-
 
 .footer {
     text-align: justify;
@@ -436,42 +435,6 @@ h3 {
     text-align: center;
 }
 
-/*              Phone                */
-
-@media screen {
-    body {
-        padding: 0; 
-    }
-    .bottom .section {
-        width: 80%; 
-        margin-top: 100px; 
-        margin-left: auto; 
-        margin-right: auto; 
-    }
-    .contents {
-        width: 80%; 
-        margin-left: auto; 
-        margin-right: auto; 
-    }
-    .footer {
-        width: 80%; 
-        margin-left: auto; 
-        margin-right: auto; 
-    }
-    .loader-container {
-        margin-left: 30px;
-    }
-}
-.mobile_name {
-    display: none;
-}
-
-.mobile_lines {
-    display: none;
-}
-
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -481,15 +444,18 @@ h3 {
     }
     
 }
+
 /* Hiding webpage for loader */
 .container {
     display: none;
 }
+
 .container,
 .footer {
     display: none;
     transition: opacity 2s ease-in-out;
 }
+
 .loaded .container,
 .loaded .footer {
     display: block;
@@ -500,6 +466,7 @@ body {
     background-image: none; 
     transition: opacity 5s ease-in-out;
 }
+
 .loaded body {
     background-image: url('img/background.jpg'); 
     opacity: 1; 
@@ -648,3 +615,114 @@ body {
           calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
           calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
   } 
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        padding: 0; 
+    }
+
+    .bottom .section {
+        width: 80%; 
+        margin-top: 100px; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .contents {
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .footer {
+        width: 80%; 
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+
+    .loader-container {
+        margin-left: 30px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: 50px;
+        padding: 0 5px; 
+    }
+
+    .card {
+        position: relative;
+        width: 110px; 
+        height: 110px;
+        margin: 10px -5px;
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .dropdown-content,
+    .second-dropdown-content,
+    .dropdown-left-content,
+    .second-dropdown-left-content {
+        width: 110px;
+        height: 110px;
+        padding: 10px;
+        position: absolute;
+        margin-top: 41%; 
+        transform: translate(-50%, -50%); 
+    }
+
+    .dropdown-left-content,
+    .second-dropdown-left-content {
+        left: 0;
+        right: 0;
+    }
+
+    .dropdown-content p,
+    .second-dropdown-content p,
+    .dropdown-left-content h3,
+    .second-dropdown-left-content h3 {
+        font-size: 11px;
+    }
+
+    .dropdown-left-content p, 
+    .second-dropdown-left-content p {
+        font-size: 10px;
+    }
+
+    .card-back h2 {
+        font-size: 15px;
+    }
+
+    .card-flipped .second-dropdown-content {
+        left: calc(50% + 235px); 
+    }
+
+    .card-flipped .dropdown-content {
+        left: calc(50% + 120px); 
+    }
+
+    .card-flipped .dropdown-left-content{
+        left: calc(50% - 120px); 
+    }
+
+    .card-flipped .second-dropdown-left-content{
+        left: calc(50% - 225px); 
+    }
+
+    .dropdown-left-content {
+      margin-left: 10px;
+    }
+
+    .find_me{
+        padding-top: 80px;
+    }
+}
+

@@ -17,7 +17,7 @@ function toggleMenu(event) {
     }
 }
 
-// Event listener for click events on the document
+// Event listener for click events
 document.addEventListener('click', toggleMenu);
 
 // Function to toggle the menu when clicked
@@ -30,13 +30,17 @@ function toggleMenuVisibility() {
 var menuButton = document.querySelector('.menu_button');
 menuButton.addEventListener('click', toggleMenuVisibility);
 
-
 function flipCard(card) {
     card.classList.toggle("card-flipped");
 }
-function toggleDropdown(card) {
-    card.classList.toggle('card-flipped');
+
+function toggleDropdown(card, event) {
+    var dropdownContent = card.querySelector('.dropdown-content');
+    if (dropdownContent && !dropdownContent.contains(event.target)) {
+        card.classList.toggle('card-flipped');
+    }
 }
+
 document.addEventListener("DOMContentLoaded", function() {
     // Show the loaders
     var loaders = document.querySelectorAll(".loader, .coffee-loader");

@@ -5,207 +5,199 @@ ITW druhý projekt
 
 <!DOCTYPE html>
 <html lang="sk">
-<head>
-    <title>Frederika Kmeťová</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-</head>
-<div class="loader-container">
-    <div class="loader coffee-loader">
-        <div class="coffee-icon"></div>
-    </div>
-    <div class="loader loading-text-loader">
-        <div class="loading-text"></div>
-    </div>
-</div>
-<body>
-    <div class="container">
-        <nav class="nav_bar">
-            <div class="logo">
-                <a href="mailto:frederyka@gmail.com">
-                    <img src="img/frede.png" alt="Logo" class="logo">
-                </a>
-            </div> 
-            <div class="menu">
-                <button class="menu_button">
-                    <img src="img/menu.png" alt="menu" class="menu_icon">
-                </button>
-                <div class="menu_content" id="menu_hide">
-                    <a href="#section_about"> O mne </a>
-                    <a href="#section_education"> Vzdelanie </a>
-                    <a href="#section_experience"> Pracovné skúsenosti </a>
-                    <a href="#section_languages"> Jazykové znalosti </a>
-                    <a href="#section_socials"> Kontakt </a>
-                    <a href="#section_review"> Recenzie </a>
-                </div>
-            </div>
-            <div class="mobile_lines">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-        <div class="contents">
-            <section class="section" id="section_about">
-                    <div class="about">
-                        <h1 class="name">Frederika <span class="surname">Kmeťová</span></h1>
-                    </div>
-                    <div class="about_subheading">
-                        23 rokov <b>|</b> VUT <b>|</b> Brno
-                    </div>
-                <br><br>
-                <div class="about_body">
-                    <div class="flashcard">
-                        <div class="image-wrapper">
-                            <img src="img/me.jpg" alt="My Image" width="130" height="150">
-                        </div>
-                        <p>
-                        Volám sa Frederika Kmeťová a vítam vás na mojej stránke. Študujem aktuálne v Brne a neplánujem sa odtiaľto sťahovať. 
-                        Život v Brne mi vyhovuje a dúfam, že sa tu aj zamestnám či už ako programátorka hier, grafická dizajnérka alebo si 
-                        nájdem jednoducho niečo kreatívne. Niekedy si treba od školy aj oddýchnuť a pre mňa dokáže byť oddychom háčkovanie, 
-                        tvorenie vecí z materiálov ktoré mám aktuálne po ruke či sledovanie dokumentárnych krimi filmov. Kedysi som mala 
-                        zajačika Izzy-ho a pred tým ešte rybičku Karolka, no aktuálne by som si priala mačičku pre ktorú si už dlhšiu dobu 
-                        strážim meno - Pixel. Počas roka občas vycestujem do zahraničia a tak si postupne plním svoj sen cestovania. 
-                        V budúcnosti plánujem navštíviť Japonsko, nakoľko ma veľmi zaujíma ich kultúra. Tam sa zatiaľ dokážem dostať iba
-                        pomocou filmov, no východný žáner až tak neobľubujem. Medzi moje najobľúbenejšie žánre patria thriller, 
-                        sci-fi alebo jednoducho filmy o programátoroch a počítačových znalcoch. Cez víkendy niekedy navštívim aj podniky
-                        s hudbou a to preferovane s žánrami ako sú Drum&Bass, Techno a ich ďalšimi odvetviami.  
-                        </p>
-                    </div>
-                </div>
-                </section>
-                <div class="card-container">
-                    <div class="card" onclick="flipCard(this)">
-                        <div class="card-front">
-                            <section class="contents" id="section_education">
-                                <img src="img/female.png" alt="Education" class="icon" width="100" height="100">
-                            </section>
-                        </div>
-                        <div class="card-back">
-                            <section class="contents" id="section_languages">
-                                <h2>Vzdelanie</h2>
-                            </section>
-                        </div>
-                        <div class="card" onclick="toggleDropdown(this)">
-                            <!-- First dropdown -->
-                            <div class="dropdown-content">
-                                <div class="education">
-                                    <h3>Stredná škola</h3>
-                                    <p>Gymnázium ulica Ladislava Sáru č. 1, Bratislava</p>
-                                    <p>2016 - 2021</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Second dropdown -->
-                            <div class="second-dropdown-content">
-                                <div class="education">
-                                    <h3>Vysoká škola</h3>
-                                    <p>VUT, Fakulta informačných technológií, Brno</p>
-                                    <p>2021</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                
-                    <div class="card" onclick="flipCard(this)">
-                        <div class="card-front">
-                            <section class="contents" id="section_experience">
-                                <img src="img/worker.png" alt="Education" class="icon" width="100" height="100">
-                                
-                            </section>
-                        </div>
-                        <div class="card-back">
-                            <section class="contents" id="section_languages">
-                                <h2>Pracovné skúsenosti</h2>
-                            </section>
-                        </div>
-                        <div class="card" onclick="toggleDropdown(this)">
-                            <!-- First left dropdown -->
-                            <div class="dropdown-left-content">
-                                <div class="experience">
-                                    <h3>Administrátor</h3>
-                                    <p>MUZIKER, a.s., Bratislava</p>
-                                    <p>2016 - 2018</p>
-                                </div>
-                                <div class="experience">
-                                    <h3>Barista</h3>
-                                    <p>Frutissimo, Bratislava</p>
-                                    <p>2018 - 2019</p>
-                                </div>
-                            </div>
-                            
-                            <!-- Second left dropdown -->
-                            <div class="second-dropdown-left-content">
-                                <div class="experience">
-                                    <h3>Asistent</h3>
-                                    <p>Sportsdirect, Bratislava</p>
-                                    <p>2019 - 2021</p>
-                                </div>
-                                <div class="experience">
-                                    <h3>Lektor</h3>
-                                    <p>Class language school, Bratislava</p>
-                                    <p>2019</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                    
-                    <div class="card" onclick="flipCard(this)">
-                        <div class="card-front">
-                            <section class="contents" id="section_languages">
-                                <img src="img/languages.png" alt="Education" class="icon" width="100" height="100">
-                            </section>
-                        </div>
-                        <div class="card-back">
-                            <section class="contents" id="section_languages">
-                                <h2>Jazykové znalosti</h2>
-                            </section>
-                        </div>
-                        <div class="card" onclick="toggleDropdown(this)">
-                            <div class="dropdown-content">
-                                <div class="languages">
-                                    <p>Anglický jazyk - C1</p>
-                                    <p>Taliansky jazyk - B2</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>   
-                </div>
-                <section class="contents" id="section_socials">
-                    <h2>Kde ma nájdete?</h2>
-                    <div class="socials">
-                        <a class="icon" href="https://github.com/kmetovafrede">
-                            <img src="img/github.png" alt="Github"></a>
-                        <a class="icon" href="https://www.linkedin.com/in/kmetovaf/">
-                            <img src="img/linkedin.png" alt="LinkedIn"> </a>
-                        <!-- <a class="icon" href="https://www.instagram.com/kmetovaf/">
-                            <img src="img/instagram.png" alt="Instagram"></a>
-                        <a class="icon" href="https://www.facebook.com/kmetovaf/">
-                            <img src="img/facebook.png" alt="Facebook"></a> -->
-                    </div>
-                </section>
-                <!-- <section class="contents" id="section_review">
-                    <h2>Recenzie</h2>
-                    <div class="review">
-                        <div class="reviewer">
-                            <img src="img/anonymous.png" alt="Anonymous" class="icon" width="100" height="100">
-                        </div>
-                    </div>
-                </section>   -->
+    <head>
+        <title>Frederika Kmeťová</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <div class="loader-container">
+        <div class="loader coffee-loader">
+            <div class="coffee-icon"></div>
+        </div>
+        <div class="loader loading-text-loader">
+            <div class="loading-text"></div>
         </div>
     </div>
-    <footer>
-        <section class="footer" id="footer">
-            <p> 2024 &copy; Frederika Kmeťová</p>
-        </section>
-    </footer>
-    <script src="script.js"></script>
-</body>
+    <body>
+        <div class="container">
+            <nav class="nav_bar">
+                <div class="logo">
+                    <a href="mailto:frederyka@gmail.com">
+                        <img src="img/frede.png" alt="Logo" class="logo">
+                    </a>
+                </div> 
+                <div class="menu">
+                    <button class="menu_button">
+                        <img src="img/menu.png" alt="menu" class="menu_icon">
+                    </button>
+                    <div class="menu_content" id="menu_hide">
+                        <a href="#section_about"> O mne </a>
+                        <a href="#section_education"> Vzdelanie </a>
+                        <a href="#section_experience"> Pracovné skúsenosti </a>
+                        <a href="#section_languages"> Jazykové znalosti </a>
+                        <a href="#section_socials"> Kontakt </a>
+                        <a href="#section_review"> Recenzie </a>
+                    </div>
+                </div>
+                <div class="mobile_lines">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <div class="contents">
+                <section class="section" id="section_about">
+                        <div class="about">
+                            <h1 class="name">Frederika <span class="surname">Kmeťová</span></h1>
+                        </div>
+                        <div class="about_subheading">
+                            23 rokov <b>|</b> VUT <b>|</b> Brno
+                        </div>
+                    <br><br>
+                    <div class="about_body">
+                        <div class="flashcard">
+                            <div class="image-wrapper">
+                                <img src="img/me.jpg" alt="My Image" width="130" height="150">
+                            </div>
+                            <p>
+                            Volám sa Frederika Kmeťová a vítam vás na mojej stránke. Študujem aktuálne v Brne a neplánujem sa odtiaľto sťahovať. 
+                            Život v Brne mi vyhovuje a dúfam, že sa tu aj zamestnám či už ako programátorka hier, grafická dizajnérka alebo si 
+                            nájdem jednoducho niečo kreatívne. Niekedy si treba od školy aj oddýchnuť a pre mňa dokáže byť oddychom háčkovanie, 
+                            tvorenie vecí z materiálov ktoré mám aktuálne po ruke či sledovanie dokumentárnych krimi filmov. Kedysi som mala 
+                            zajačika Izzy-ho a pred tým ešte rybičku Karolka, no aktuálne by som si priala mačičku pre ktorú si už dlhšiu dobu 
+                            strážim meno - Pixel. Počas roka občas vycestujem do zahraničia a tak si postupne plním svoj sen cestovania. 
+                            V budúcnosti plánujem navštíviť Japonsko, nakoľko ma veľmi zaujíma ich kultúra. Tam sa zatiaľ dokážem dostať iba
+                            pomocou filmov, no východný žáner až tak neobľubujem. Medzi moje najobľúbenejšie žánre patria thriller, 
+                            sci-fi alebo jednoducho filmy o programátoroch a počítačových znalcoch. Cez víkendy niekedy navštívim aj podniky
+                            s hudbou a to preferovane s žánrami ako sú Drum&Bass, Techno a ich ďalšimi odvetviami.  
+                            </p>
+                        </div>
+                    </div>
+                    </section>
+                    <div class="card-container">
+                        <div class="card" onclick="flipCard(this)">
+                            <div class="card-front">
+                                <section class="contents" id="section_education">
+                                    <img src="img/female.png" alt="Education" class="icon" width="100" height="100">
+                                </section>
+                            </div>
+                            <div class="card-back">
+                                <section class="contents" id="section_languages">
+                                    <h2>Vzdelanie</h2>
+                                </section>
+                            </div>
+                            <div class="card" onclick="toggleDropdown(this, event)">
+                                <!-- First dropdown -->
+                                <div class="dropdown-content">
+                                    <div class="education">
+                                        <h3>Stredná škola</h3>
+                                        <p>Gymnázium ulica Ladislava Sáru č. 1, Bratislava</p>
+                                        <p>2016 - 2021</p>
+                                    </div>
+                                </div>
+                                <!-- Second dropdown -->
+                                <div class="second-dropdown-content">
+                                    <div class="education">
+                                        <h3>Vysoká škola</h3>
+                                        <p>VUT, Fakulta informačných technológií, Brno</p>
+                                        <p>2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" onclick="flipCard(this, event)">
+                            <div class="card-front">
+                                <section class="contents" id="section_experience">
+                                    <img src="img/worker.png" alt="Education" class="icon" width="100" height="100">
+                                </section>
+                            </div>
+                            <div class="card-back">
+                                <section class="contents" id="section_languages">
+                                    <h2>Pracovné skúsenosti</h2>
+                                </section>
+                            </div>
+                            <div class="card" onclick="toggleDropdown(this, event)">
+                                <!-- First left dropdown -->
+                                <div class="dropdown-left-content">
+                                    <div class="experience">
+                                        <h3>Administrátor</h3>
+                                        <p>MUZIKER, a.s., Bratislava</p>
+                                        <p>2016 - 2018</p>
+                                    </div>
+                                    <div class="experience">
+                                        <h3>Barista</h3>
+                                        <p>Frutissimo, Bratislava</p>
+                                        <p>2018 - 2019</p>
+                                    </div>
+                                </div>
+                                <!-- Second left dropdown -->
+                                <div class="second-dropdown-left-content">
+                                    <div class="experience">
+                                        <h3>Asistent</h3>
+                                        <p>Sportsdirect, Bratislava</p>
+                                        <p>2019 - 2021</p>
+                                    </div>
+                                    <div class="experience">
+                                        <h3>Lektor</h3>
+                                        <p>Class language school, Bratislava</p>
+                                        <p>2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" onclick="flipCard(this)">
+                            <div class="card-front">
+                                <section class="contents" id="section_languages">
+                                    <img src="img/languages.png" alt="Education" class="icon" width="100" height="100">
+                                </section>
+                            </div>
+                            <div class="card-back">
+                                <section class="contents" id="section_languages">
+                                    <h2>Jazykové znalosti</h2>
+                                </section>
+                            </div>
+                            <div class="card" onclick="toggleDropdown(this, event)">
+                                <div class="dropdown-content">
+                                    <div class="languages">
+                                        <p>Anglický jazyk - C1</p>
+                                        <p>Taliansky jazyk - B2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <section class="find_me" id="section_socials">
+                        <h2>Kde ma nájdete?</h2>
+                        <div class="socials">
+                            <a class="icon" href="https://github.com/kmetovafrede">
+                                <img src="img/github.png" alt="Github"></a>
+                            <a class="icon" href="https://www.linkedin.com/in/kmetovaf/">
+                                <img src="img/linkedin.png" alt="LinkedIn"> </a>
+                            <!-- <a class="icon" href="https://www.instagram.com/kmetovaf/">
+                                <img src="img/instagram.png" alt="Instagram"></a>
+                            <a class="icon" href="https://www.facebook.com/kmetovaf/">
+                                <img src="img/facebook.png" alt="Facebook"></a> -->
+                        </div>
+                    </section>
+                    <!-- <section class="find_me" id="section_review">
+                        <h2>Recenzie</h2>
+                        <div class="review">
+                            <div class="reviewer">
+                                <img src="img/anonymous.png" alt="Anonymous" class="icon" width="100" height="100">
+                            </div>
+                        </div>
+                    </section>   -->
+            </div>
+        </div>
+        <footer>
+            <section class="footer" id="footer">
+                <p> 2024 &copy; Frederika Kmeťová</p>
+            </section>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
