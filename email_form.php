@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $rating = $_POST["rating"];
     $comment = $_POST["comment"];
+
+}
     
     $to = 'frederyka@gmail.com';
 $subject = 'Test Email';
