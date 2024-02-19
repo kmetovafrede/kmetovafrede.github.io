@@ -763,5 +763,5 @@ body {
 }
 
 #reviewForm button:hover {
-    background-color: #6845a0;
+    background-color: var(--first_blue);
 }
