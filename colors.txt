@@ -8,8 +8,7 @@ LIGHTEST TO DARKEST
 #1E2338
 #000000
 
-
-new colors?
+new colors
 #9bc0ec
 #7dace7
 #5f99e1
