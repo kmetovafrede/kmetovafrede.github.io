@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.display = "block";
         document.querySelector("body").style.backgroundImage = "url('img/satin_wallpaper2.jpg')"; 
 
-        // Trigger CSS animation to fade in the content
         container.style.animation = "fadeIn 1s ease-in-out"; 
         container.style.opacity = "1"; 
         footer.style.animation = "fadeIn 1s ease-in-out"; 
