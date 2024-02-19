@@ -437,6 +437,7 @@ h3 {
 }
 
 /*              Phone                */
+
 @media screen {
     body {
         padding: 0; 
@@ -458,16 +459,9 @@ h3 {
         margin-right: auto; 
     }
     .loader-container {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        align-items: center;
-        margin-left: 10%; 
+        margin-left: 30px;
     }
 }
-
 .mobile_name {
     display: none;
 }
@@ -515,7 +509,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: 0;
     transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
