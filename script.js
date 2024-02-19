@@ -3,32 +3,43 @@
 // 2023/2024
 // .js file
 
-// Function to handle click events
-function toggleMenu(event) {
-    var menu = document.querySelector('.menu_content');
-    var menuButton = document.querySelector('.menu_button');
+function toggleMenuVisibility() {
+    var menuContent = document.querySelector('.menu_content');
+    var menuIcon = document.querySelector('.menu');
 
-    // Check if the clicked element is inside the menu or the menu button
-    var isClickInsideMenu = menu.contains(event.target) || menuButton.contains(event.target);
-
-    // If the click is not inside the menu or menu button, close the menu
-    if (!isClickInsideMenu) {
-        menu.style.right = '-200px';
+    var menuRightValue = menuContent.style.right;
+    if (menuRightValue === '' || menuRightValue === '-200px') {
+        menuContent.style.right = '0';
+        menuContent.classList.add('opened'); 
+        menuIcon.classList.add('opened'); 
+    } else {
+        menuContent.style.right = '-200px';
+        menuContent.classList.remove('opened'); 
+        menuIcon.classList.remove('opened'); 
     }
 }
 
-// Event listener for click events
-document.addEventListener('click', toggleMenu);
+var menuIcon = document.querySelector('.menu');
+menuIcon.addEventListener('click', toggleMenuVisibility);
 
-// Function to toggle the menu when clicked
-function toggleMenuVisibility() {
-    var menu = document.querySelector('.menu_content');
-    menu.style.right = menu.style.right === '-200px' ? '0' : '-200px';
+function closeMenu() {
+    var menuContent = document.querySelector('.menu_content');
+    var menuIcon = document.querySelector('.menu');
+    menuContent.style.right = '-200px';
+    menuContent.classList.remove('opened'); 
+    menuIcon.classList.remove('opened'); 
 }
 
-// Event listener for click events on the menu button
-var menuButton = document.querySelector('.menu_button');
-menuButton.addEventListener('click', toggleMenuVisibility);
+document.addEventListener('click', function(event) {
+    var menuIcon = document.querySelector('.menu');
+    var menuContent = document.querySelector('.menu_content');
+
+    var isClickInsideMenu = menuIcon.contains(event.target) || menuContent.contains(event.target);
+
+    if (!isClickInsideMenu) {
+        closeMenu();
+    }
+});
 
 function flipCard(card) {
     card.classList.toggle("card-flipped");
@@ -42,13 +53,11 @@ function toggleDropdown(card, event) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Show the loaders
     var loaders = document.querySelectorAll(".loader, .coffee-loader");
     loaders.forEach(function(loader) {
         loader.style.display = "block";
     });
 
-    // Hide the entire page content, including background image and footer initially
     document.querySelector("body").style.backgroundImage = "none";
     var container = document.querySelector(".container");
     container.style.display = "none";
@@ -57,23 +66,22 @@ document.addEventListener("DOMContentLoaded", function() {
     footer.style.display = "none";
     footer.style.opacity = "0"; 
 
-    // Hide the loaders and smoothly reveal the webpage content after 2 seconds (to match coffee loader animation duration)
     setTimeout(function() {
         loaders.forEach(function(loader) {
-            loader.style.display = "none"; // Hide the loaders
+            loader.style.display = "none"; 
         });
 
         container.style.display = "block";
         footer.style.display = "block";
-        document.querySelector("body").style.backgroundImage = "url('img/satin_wallpaper2.jpg')"; // Show the background image
+        document.querySelector("body").style.backgroundImage = "url('img/satin_wallpaper2.jpg')"; 
 
         // Trigger CSS animation to fade in the content
-        container.style.animation = "fadeIn 1s ease-in-out"; // Smooth transition with ease-in-out timing function
-        container.style.opacity = "1"; // Set opacity to 1 after animation
+        container.style.animation = "fadeIn 1s ease-in-out"; 
+        container.style.opacity = "1"; 
         footer.style.animation = "fadeIn 1s ease-in-out"; 
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 3800); // TODO 3800 seconds are top
+    }, 1); // TODO 3800 seconds are top
 });
 
