@@ -93,6 +93,21 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 3800); // TODO 3800 seconds are top
+    }, 1); // TODO 3800 seconds are top
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const slideshow = document.querySelector('.slideshow');
+    let slideIndex = 0;
+  
+    function showNextSlide() {
+      slideIndex++;
+      if (slideIndex >= slideshow.children.length) {
+        slideIndex = 0; 
+      }
+      slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+  
+    setInterval(showNextSlide, 1);
+  });
+  

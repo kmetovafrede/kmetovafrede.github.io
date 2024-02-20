@@ -103,9 +103,8 @@ h3 {
 
 .flashcard p {
     margin-bottom: 0;
-    font-size: 1rem;
-    font-size: large;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem; 
     color: black; 
     font-weight: 500;
     text-align: justify;
@@ -126,11 +125,11 @@ h3 {
     position: center;
 }
 
-/* .flashcard::after {
+.flashcard::after {
     content: "";
     display: table;
     clear: both;
-} */
+}
 
 .education {
     font-weight: 600;
@@ -442,6 +441,7 @@ h3 {
     margin: 0;
     padding: 0;
     text-align: center;
+    color: var(--first_blue);
 }
 
 @keyframes fadeIn {
