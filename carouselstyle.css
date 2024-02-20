@@ -1,0 +1,118 @@
+:root {
+    --first_blue: #9bc0ec;
+    --second_blue: #7dace7;
+    --third_blue: #5f99e1;
+    --fourth_blue: #4186dc;
+    --fifth_blue: #1b5296;
+    --sixth_blue: #164278;
+    --seventh_blue: #10315a;
+    --eight_blue: #0b213c;
+    --ninth_blue: #465ab6;
+    --tenth-blue: #20337f;
+    --eleventh-blue: #101e56;
+    --twelfth-blue: #060a26;
+    --thirteenth-blue-light: #90a3f7;
+    --b_black: #000000;
+    --w_white: #ffffff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+  }
+  
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.c {
+    min-width: 700px;
+    width: 700px;
+    height: 470px;
+    border-radius: 12px;
+    padding: 50px;
+    padding-bottom: 40px;
+    box-shadow: 0 8px 48px 2px hsla(10 6% 15% / .4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background: var(--ninth_blue);
+    box-sizing: border-box;
+    animation: slideshow 20s infinite; 
+
+}
+
+.ci {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    transform-origin: left 50%;
+    background: inherit;
+    z-index: var(--z);
+    transition: .3s ease-out;
+}
+
+input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: -10;
+}
+
+label {
+    width: 10%;
+    height: 10px;
+    margin-right: 4px;
+    border-radius: 20px;
+
+    background: hsla(0 0% 90% / .3);
+    cursor: pointer;
+
+    position: relative;
+    z-index: 10;
+}
+
+label:last-child {
+    margin-right: 0;
+}
+
+input:checked+label {
+    background: linear-gradient(to right,
+    hsla(0, 0%, 100%, 0.7),
+    hsla(233, 50%, 55%, 0.7));
+}
+
+input:not(:checked)+label+.ci {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+input:checked+label+.ci~.ci {
+    transform: translateX(100%);
+}
+
+input:not(:checked)+label+.ci {
+    transition: 0;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+

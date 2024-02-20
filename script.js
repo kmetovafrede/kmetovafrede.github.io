@@ -93,43 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 1); // TODO 3800 seconds are top
+    }, 3800); // TODO 3800 seconds are top
 });
 
-
-window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
-const gridContainer = document.querySelector(".grid-container");
-
-// Function to add a new grid item
-const addGridItem = () => {
-    // Create a new grid item
-    const newGridItem = document.createElement("div");
-    newGridItem.classList.add("grid-item");
-
-    // Create an image element and set its attributes
-    const img = document.createElement("img");
-    img.src = `https://source.unsplash.com/random/${Math.floor(Math.random() * 1000)}`;
-    img.alt = "Random Image";
-
-    // Append the image to the grid item
-    newGridItem.appendChild(img);
-
-    // Append the grid item to the grid container
-    gridContainer.appendChild(newGridItem);
-
-    // Add event listener for expanding grid item on click
-    newGridItem.addEventListener("click", () => {
-        newGridItem.classList.toggle("card--expanded");
-    });
-};
-
-// Event listener for adding a new grid item
-document.querySelector(".js-add-card").addEventListener("click", addGridItem);
-
-// Initialize the grid with existing grid items
-animateCSSGrid.wrapGrid(gridContainer, {
-    duration: 350,
-    stagger: 10,
-    onStart: elements => console.log(`started animation for ${elements.length} elements`),
-    onEnd: elements => console.log(`finished animation for ${elements.length} elements`)
-});
