@@ -31,7 +31,7 @@ ITW druhý projekt
 
 body {
     background-size: cover;
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-left: 5rem;
     padding-right: 5rem;
 }
@@ -470,7 +470,6 @@ h3 {
     display: block;
 }
 
-/* Hide the background image initially */
 body {
     background-image: none; 
     transition: opacity 5s ease-in-out;
@@ -478,6 +477,7 @@ body {
 
 .loaded body {
     background-image: url('img/satin_wallpaper2.jpg'); 
+    background-size: cover;
     opacity: 1; 
 }
 
@@ -623,37 +623,70 @@ body {
     100% {text-shadow: 
           calc( 0*var(--w)) 0,calc(-1*var(--w)) 0,calc(-2*var(--w)) 0,calc(-3*var(--w)) 0,calc(-4*var(--w)) 0, 
           calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
-  } 
-
-
-
+} 
 
 .car-container {
-    display: grid;
-    gap: 40px;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    padding-top: 30px;
     padding-left: 50px;
 }
 
 .car-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-auto-rows: auto; 
+    display: flex;
+    align-items: center;
+}
+
+.left-images,
+.right-images {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 }
 
 .car-item {
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .car-item img {
-    width: 50%;
-    height: auto;
-    border-radius: 8px;
+    width: 40%; 
+    height: auto; 
+    border-radius: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease; 
 }
+
+.car-item:hover img {
+    transform: scale(1.8); 
+}
+
+.text-container {
+    white-space: nowrap;
+}
+
+.text-container p {
+    margin: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: var(--eleventh-blue); 
+    font-size: 60px; 
+    font-family: 'Alegreya '; 
+    font-weight: 500;
+    background-color: rgba(155, 192, 236, 0.8); 
+    padding: 10px; 
+    border-radius: 10px; 
+
+}
+
+.middle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PHONE */
 
 @media screen and (max-width: 768px) {
     
@@ -762,6 +795,24 @@ body {
 
     .find_me{
         padding-top: 80px;
+    }
+    
+    .slideshow {
+        height: 10vh; 
+        margin: 10px; 
+    }
+
+    .slideshow-container {
+        width: 10%;
+        margin: 0 auto; 
+    }
+
+    .c {
+        min-width: auto;
+        width: 10%;
+        max-width: none; 
+        height: auto; 
+        padding: 20px;
     }
 }
 
