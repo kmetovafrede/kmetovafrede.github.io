@@ -13,14 +13,9 @@ function toggleMenuVisibility() {
         menuContent.classList.add('opened'); 
         menuIcon.classList.add('opened'); 
     } else {
-        menuContent.style.right = '-200px';
-        menuContent.classList.remove('opened'); 
-        menuIcon.classList.remove('opened'); 
+        closeMenu(); // Close the menu when already open
     }
 }
-
-var menuIcon = document.querySelector('.menu');
-menuIcon.addEventListener('click', toggleMenuVisibility);
 
 function closeMenu() {
     var menuContent = document.querySelector('.menu_content');
@@ -31,12 +26,29 @@ function closeMenu() {
 }
 
 document.addEventListener('click', function(event) {
-    var menuIcon = document.querySelector('.menu');
     var menuContent = document.querySelector('.menu_content');
+    var menuIcon = document.querySelector('.menu');
 
     var isClickInsideMenu = menuIcon.contains(event.target) || menuContent.contains(event.target);
 
     if (!isClickInsideMenu) {
+        closeMenu();
+    }
+});
+
+var menuIcon = document.querySelector('.menu');
+menuIcon.addEventListener('click', toggleMenuVisibility);
+
+// Add event listener to the menu content to close the menu when clicked
+var menuContent = document.querySelector('.menu_content');
+menuContent.addEventListener('click', function(event) {
+    closeMenu();
+    event.stopPropagation(); // Prevent the event from bubbling up and closing the menu immediately
+});
+
+// Close the menu when the window is scrolled
+window.addEventListener('scroll', function() {
+    if (menuContent.classList.contains('opened')) {
         closeMenu();
     }
 });
@@ -84,22 +96,40 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1); // TODO 3800 seconds are top
 });
 
-document.getElementById("reviewForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    console.log("Form submission intercepted.");
-    
-    var formData = new FormData(this);
-    console.log("Form data:", formData);
-    
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "submit_review.php", true);
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            alert("Review submitted successfully!");
-            document.getElementById("reviewForm").reset();
-        } else {
-            alert("Error submitting review. Please try again later.");
-        }
-    };
-    xhr.send(formData);
+
+window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
+const gridContainer = document.querySelector(".grid-container");
+
+// Function to add a new grid item
+const addGridItem = () => {
+    // Create a new grid item
+    const newGridItem = document.createElement("div");
+    newGridItem.classList.add("grid-item");
+
+    // Create an image element and set its attributes
+    const img = document.createElement("img");
+    img.src = `https://source.unsplash.com/random/${Math.floor(Math.random() * 1000)}`;
+    img.alt = "Random Image";
+
+    // Append the image to the grid item
+    newGridItem.appendChild(img);
+
+    // Append the grid item to the grid container
+    gridContainer.appendChild(newGridItem);
+
+    // Add event listener for expanding grid item on click
+    newGridItem.addEventListener("click", () => {
+        newGridItem.classList.toggle("card--expanded");
+    });
+};
+
+// Event listener for adding a new grid item
+document.querySelector(".js-add-card").addEventListener("click", addGridItem);
+
+// Initialize the grid with existing grid items
+animateCSSGrid.wrapGrid(gridContainer, {
+    duration: 350,
+    stagger: 10,
+    onStart: elements => console.log(`started animation for ${elements.length} elements`),
+    onEnd: elements => console.log(`finished animation for ${elements.length} elements`)
 });
