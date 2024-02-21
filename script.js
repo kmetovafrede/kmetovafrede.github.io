@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 1); // TODO 3800 seconds are top
+    }, 3800); // TODO 3800 seconds are top
 });
 
 document.addEventListener("DOMContentLoaded", function() {
