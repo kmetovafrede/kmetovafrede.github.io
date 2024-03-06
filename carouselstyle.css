@@ -25,11 +25,12 @@ ITW druhý projekt
 .slideshow-container {
     position: relative;
     overflow: hidden;
+    /* margin-top: 40px ; */
 }
   
 .slideshow-text {
     position: absolute;
-    top: 10px;
+    /* top: -10px; */
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;

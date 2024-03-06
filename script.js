@@ -93,21 +93,85 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 3800); // TODO 3800 seconds are top
+    }, 1); // TODO 3800 seconds are top
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const slideshow = document.querySelector('.slideshow');
-    let slideIndex = 0;
+// Usage: codyhouse.co/license
+(function() {
+    var backTop = document.getElementsByClassName('js-back-to-top')[0];
+    if( backTop ) {
+      var dataElement = backTop.getAttribute('data-element');
+      var scrollElement = dataElement ? document.querySelector(dataElement) : window;
+      var scrollOffsetInit = parseInt(backTop.getAttribute('data-offset-in')) || parseInt(backTop.getAttribute('data-offset')) || 0, //show back-to-top if scrolling > scrollOffset
+        scrollOffsetOutInit = parseInt(backTop.getAttribute('data-offset-out')) || 0, 
+        scrollOffset = 0,
+        scrollOffsetOut = 0,
+        scrolling = false;
   
-    function showNextSlide() {
-      slideIndex++;
-      if (slideIndex >= slideshow.children.length) {
-        slideIndex = 0; 
+      var targetIn = backTop.getAttribute('data-target-in') ? document.querySelector(backTop.getAttribute('data-target-in')) : false,
+        targetOut = backTop.getAttribute('data-target-out') ? document.querySelector(backTop.getAttribute('data-target-out')) : false;
+  
+      updateOffsets();
+      
+      backTop.addEventListener('click', function(event) {
+        event.preventDefault();
+        if(!window.requestAnimationFrame) {
+          scrollElement.scrollTo(0, 0);
+        } else {
+          dataElement ? scrollElement.scrollTo({top: 0, behavior: 'smooth'}) : window.scrollTo({top: 0, behavior: 'smooth'});
+        } 
+        moveFocus(document.getElementById(backTop.getAttribute('href').replace('#', '')));
+      });
+      
+      checkBackToTop();
+      if (scrollOffset > 0 || scrollOffsetOut > 0) {
+        scrollElement.addEventListener("scroll", function(event) {
+          if( !scrolling ) {
+            scrolling = true;
+            (!window.requestAnimationFrame) ? setTimeout(function(){checkBackToTop();}, 250) : window.requestAnimationFrame(checkBackToTop);
+          }
+        });
       }
-      slideshow.style.transform = `translateX(-${slideIndex * 100}%)`;
+  
+      function checkBackToTop() {
+        updateOffsets();
+        var windowTop = scrollElement.scrollTop || document.documentElement.scrollTop;
+        if(!dataElement) windowTop = window.scrollY || document.documentElement.scrollTop;
+        var condition =  windowTop >= scrollOffset;
+        if(scrollOffsetOut > 0) {
+          condition = (windowTop >= scrollOffset) && (window.innerHeight + windowTop < scrollOffsetOut);
+        }
+        backTop.classList.toggle('back-to-top--is-visible', condition);
+        scrolling = false;
+      }
+  
+      function updateOffsets() {
+        scrollOffset = getOffset(targetIn, scrollOffsetInit, true);
+        scrollOffsetOut = getOffset(targetOut, scrollOffsetOutInit);
+      }
+  
+      function getOffset(target, startOffset, bool) {
+        var offset = 0;
+        if(target) {
+          var windowTop = scrollElement.scrollTop || document.documentElement.scrollTop;
+          if(!dataElement) windowTop = window.scrollY || document.documentElement.scrollTop;
+          var boundingClientRect = target.getBoundingClientRect();
+          offset = bool ? boundingClientRect.bottom : boundingClientRect.top;
+          offset = offset + windowTop;
+        }
+        if(startOffset && startOffset) {
+          offset = offset + parseInt(startOffset);
+        }
+        return offset;
+      }
+  
+      function moveFocus(element) {
+        if( !element ) element = document.getElementsByTagName("body")[0];
+        element.focus();
+        if (document.activeElement !== element) {
+          element.setAttribute('tabindex','-1');
+          element.focus();
+        }
+      };
     }
-  
-    setInterval(showNextSlide, 1);
-  });
-  
+  }());
