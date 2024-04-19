@@ -33,7 +33,8 @@ body {
     background-size: cover;
     padding-top: 2rem;
     padding-left: 15rem;
-    padding-right: 15rem;
+    padding-right: 15rem;background-image: none; 
+    transition: opacity 5s ease-in-out;
 }
 
 h1 {
@@ -209,7 +210,7 @@ h3 {
     height: 100%; 
     background-color: var(--first_blue);
     transition: right 0.5s ease; 
-    z-index: 2;
+    z-index: 9999;
 }
 
 .menu_content a {
@@ -232,14 +233,14 @@ h3 {
     padding: 0;
     margin-left: auto;
     margin-top: -60px; 
+    z-index: 9999;
 }
 
 .line {
     fill: none;
     stroke: var(--eleventh-blue);
     stroke-width: 6;
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line1 {
@@ -316,6 +317,7 @@ h3 {
 .card:nth-child(1) {
     margin-right: auto; 
 }
+
 /* last */
 .card:nth-child(3) {
     margin-right: auto;
@@ -467,10 +469,6 @@ h3 {
     display: block;
 }
 
-body {
-    background-image: none; 
-    transition: opacity 5s ease-in-out;
-}
 
 .loaded body {
     background-image: url('img/satin_wallpaper2.jpg'); 
@@ -622,66 +620,52 @@ body {
           calc(-5*var(--w)) 0,calc(-6*var(--w)) 0,calc(-7*var(--w)) 0,calc(-8*var(--w)) 0,calc(-9*var(--w)) 0}
 } 
 
-.car-container {
+.center-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh; 
-    padding-top: 30px;
-    padding-left: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.car-container {
+    position: relative;
+}
+
+.text-container {
+    background-color: rgba(155, 192, 236, 0.8); 
+    padding: 10px; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.text-container p{
+    font-size: 2.5rem;
+    color: var(--eleventh-blue);
+    text-align: center;
 }
 
 .car-grid {
     display: flex;
-    align-items: center;
-}
-
-.left-images,
-.right-images {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 }
 
 .car-item {
+    position: relative;
     overflow: hidden;
-    border-radius: 8px;
 }
 
 .car-item img {
-    width: 40%; 
-    height: auto; 
-    border-radius: 10px;
-    transition: transform 0.3s ease, filter 0.3s ease; 
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .car-item:hover img {
-    transform: scale(1.8); 
+    transform: scale(1.5);
 }
 
-.text-container {
-    white-space: nowrap;
-}
 
-.text-container p {
-    margin: 0;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    color: var(--eleventh-blue); 
-    font-size: 60px; 
-    font-family: 'Alegreya '; 
-    font-weight: 500;
-    background-color: rgba(155, 192, 236, 0.8); 
-    padding: 10px; 
-    border-radius: 10px; 
-
-}
-
-.middle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* PHONE */
 
@@ -795,25 +779,49 @@ body {
     }
     
    
-    .slideshow-text{
-        margin-top: -40px;
-    }
     .slideshow-container {
-        width: 320px;
-        align-items: center;
-        height: 230px;
-        margin-top: 30px;
+        position: relative;
+        overflow: hidden;
+        padding-top: 140px; 
+        margin-bottom: 30px; 
     }
-
+    
+    .slideshow-text {
+        top: -1px; 
+    }
+    
+    .slideshow-text h1 {
+        font-size: 2.5rem;
+        color: var(--eleventh-blue);
+        text-align: center;
+    }
+    
+    .slideshow {
+        width: 100%;
+        margin-top: 50px; 
+        margin-bottom: 20px; 
+    }
+    
+    
+    .c {
+        width: 50%;
+        overflow: hidden;
+        background: var(--ninth_blue);
+        box-sizing: border-box;
+    }
+    
+   
+    
     .grid-item img {
-        margin-top: 16.8%;
-        width: 50%; 
-        height: 60%; 
-        max-width: 50%;
-        max-height: 60%;
+        width: 50%;
+        border-radius: 8px;
     }
+    
+    .car-grid {
+        flex-direction: column;
+    }
+    
 }
-
 
   .cd-icon {
     font-size: 1em;
