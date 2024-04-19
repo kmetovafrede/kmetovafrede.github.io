@@ -13,7 +13,7 @@ function toggleMenuVisibility() {
         menuContent.classList.add('opened'); 
         menuIcon.classList.add('opened'); 
     } else {
-        closeMenu(); // Close the menu when already open
+        closeMenu();
     }
 }
 
@@ -93,9 +93,11 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.opacity = "1"; 
         document.body.style.animation = "fadeIn 1s ease-in-out"; 
         document.body.style.opacity = "1"; 
-    }, 1); // TODO 2800 seconds are top
+    }, 2800); // TODO 2800 seconds are top
 });
 
+
+// Back to top button found online by CodyHouse
 // Usage: codyhouse.co/license
 (function() {
     var backTop = document.getElementsByClassName('js-back-to-top')[0];
