@@ -65,7 +65,7 @@ h3 {
     text-align: center;
 }
 
-.about_subheading {
+.about-subheading {
     font-family: 'Manrope';
     text-transform: uppercase;
     color: var(--fourth_blue);
@@ -75,7 +75,7 @@ h3 {
     text-align: center;
 }
 
-.about_subheading a {
+.about-subheading a {
     color: var(--b_black);
     text-decoration: underline;
     font-size: normal;
@@ -88,6 +88,7 @@ h3 {
     padding: 20px;
     margin: 0 auto; 
     overflow: hidden; 
+    margin-top: 20px;
 }
 
 .flashcard::before {
@@ -171,7 +172,7 @@ h3 {
     margin: 0 auto;
 }
 
-.container .nav_bar {
+.container .nav-bar {
     background-color: var(--first_blue);
     width: 100%; 
     height: 100px; 
@@ -196,12 +197,12 @@ h3 {
     height: 60px;
 }
 
-.menu_stuff {
+.menu-stuff {
     position: relative;
     display: inline-block;
 }
 
-.menu_content {
+.menu-content {
     position: fixed;
     top: 100px;
     right: -200px; 
@@ -212,7 +213,7 @@ h3 {
     z-index: 9999;
 }
 
-.menu_content a {
+.menu-content a {
     font-family: 'Cormorant';
     font-weight: bold;
     color: var(--b_black);
@@ -281,7 +282,7 @@ h3 {
     z-index: 1;
 }
 
-.find_me {
+.find-me {
     margin: 0;
     padding: 0;
     text-align: center;
@@ -684,7 +685,7 @@ h3 {
     color: #ffffff;
 }
 
-.line_rozvoj {
+.line-rozvoj {
     position: absolute;
     width: 4px;
     height: 90%;
@@ -898,7 +899,7 @@ h3 {
         margin-left: 10px;
     }
 
-    .find_me{
+    .find-me{
         padding-top: 80px;
     }
     
@@ -972,7 +973,7 @@ h3 {
         color: #ffffff;
     }
     
-    .line_rozvoj {
+    .line-rozvoj {
         position: absolute;
         width: 2px;
         height: 45%;

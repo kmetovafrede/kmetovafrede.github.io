@@ -5,7 +5,7 @@
 
 // toggle the visibility of the menu
 function toggleMenuVisibility() {
-    var menuContent = document.querySelector('.menu_content');
+    var menuContent = document.querySelector('.menu-content');
     var menuIcon = document.querySelector('.menu');
 
     var menuRightValue = menuContent.style.right;
@@ -21,7 +21,7 @@ function toggleMenuVisibility() {
 
 // closing menu
 function closeMenu() {
-    var menuContent = document.querySelector('.menu_content');
+    var menuContent = document.querySelector('.menu-content');
     var menuIcon = document.querySelector('.menu');
     // closing, by setting the right property
     menuContent.style.right = '-200px';
@@ -31,7 +31,7 @@ function closeMenu() {
 
 // event listener for clicks outside the menu
 document.addEventListener('click', function(event) {
-    var menuContent = document.querySelector('.menu_content');
+    var menuContent = document.querySelector('.menu-content');
     var menuIcon = document.querySelector('.menu');
 
     // checking where click happened
@@ -47,7 +47,7 @@ var menuIcon = document.querySelector('.menu');
 menuIcon.addEventListener('click', toggleMenuVisibility);
 
 // event listener for closing menu when clicked
-var menuContent = document.querySelector('.menu_content');
+var menuContent = document.querySelector('.menu-content');
 menuContent.addEventListener('click', function(event) {
     closeMenu();
     event.stopPropagation(); // prevent the event from closing the menu

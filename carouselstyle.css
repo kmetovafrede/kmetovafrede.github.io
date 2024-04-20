@@ -54,7 +54,7 @@ ITW druhý projekt
     margin-top: 70px;
 }
 
-.c {
+.slideshow-pictures {
     min-width: 700px;
     width: 700px;
     height: 470px;
@@ -75,7 +75,7 @@ ITW druhý projekt
 
 }
 
-.ci {
+.slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -100,10 +100,8 @@ label {
     height: 10px;
     margin-right: 4px;
     border-radius: 20px;
-
     background: hsla(0 0% 90% / .3);
     cursor: pointer;
-
     position: relative;
     z-index: 10;
 }
@@ -113,21 +111,19 @@ label:last-child {
 }
 
 input:checked+label {
-    background: linear-gradient(to right,
-    hsla(0, 0%, 100%, 0.7),
-    hsla(233, 50%, 55%, 0.7));
+    background: linear-gradient(to right, hsla(0, 0%, 100%, 0.7), hsla(233, 50%, 55%, 0.7));
 }
 
-input:not(:checked)+label+.ci {
+input:not(:checked)+label+.slide {
     transform: translateX(-100%);
     opacity: 0;
 }
 
-input:checked+label+.ci~.ci {
+input:checked+label+.slide~.slide {
     transform: translateX(100%);
 }
 
-input:not(:checked)+label+.ci {
+input:not(:checked)+label+.slide {
     transition: 0;
 }
 
