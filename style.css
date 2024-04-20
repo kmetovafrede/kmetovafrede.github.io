@@ -223,7 +223,6 @@ h3 {
     border-bottom: 2px solid var(--w_white);
 }
 
-
 .menu {
     background-color: transparent;
     border: none;
@@ -485,7 +484,7 @@ h3 {
 }
 
 
-/*Coffee loader and name loader provided by a free css websites */
+/*Coffee loader and name loader provided by a free css websites just for my website not as a part of the project */
 /*---------------------------------------------------------------------------------*/
 .loader {
     margin-right: 20px;
@@ -984,7 +983,7 @@ h3 {
 
 
 /*------------------------------------------------------------*/
-  .cd-icon {
+.cd-icon {
     font-size: 1em;
     height: 1em;
     width: 1em;
@@ -994,14 +993,14 @@ h3 {
     line-height: 1;
     flex-shrink: 0;
     max-width: initial;
-  }
-  
-  .cd-icon use {
+}
+
+.cd-icon use {
     color: inherit;
     fill: currentColor;
-  }
-  
-  .back-to-top {
+}
+
+.back-to-top {
     width: 50px;
     height: 50px;
     display: flex;
@@ -1014,20 +1013,20 @@ h3 {
     visibility: hidden;
     opacity: 0;
     transition: 0.2s;
-  }
-  
-  .back-to-top:hover {
-    background-color: hsl(230, 13%, 9%);
-  }
-  
-  .back-to-top .cd-icon {
+}
+
+.back-to-top:hover {
+    background-color: hsl(230, 13%, 9%);    
+}
+
+.back-to-top .cd-icon {
     --size: 20px;
     display: block;
     margin: auto;
     color: hsl(0, 0%, 100%);
-  }
-  
-  .back-to-top--is-visible {
+}
+
+.back-to-top--is-visible {
     visibility: visible;
     opacity: 1;
-  }
+}

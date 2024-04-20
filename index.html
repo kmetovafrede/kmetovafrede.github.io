@@ -14,6 +14,7 @@ ITW druhý projekt
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     </head>
+    <body>
     <div class="loader-container">
         <div class="loader coffee-loader">
             <div class="coffee-icon"></div>
@@ -22,7 +23,6 @@ ITW druhý projekt
             <div class="loading-text"></div>
         </div>
     </div>
-    <body>
         <div class="container">
             <nav class="nav_bar">
                 <div class="logo">
@@ -39,9 +39,7 @@ ITW druhý projekt
                 </button>
                 <div class="menu_stuff">
                     <div class="menu_content" id="menu_hide">
-                        <div class="column1">
-                            <a href="#section_about"> O mne </a>
-                        </div>
+                        <a href="#section_about"> O mne </a>
                         <a href="#section_education"> Znalosti </a>
                         <a href="analog.html"> Portfólio fotografií </a>
                         <a href="rozvoj.html"> Rozvoj </a>
@@ -49,13 +47,6 @@ ITW druhý projekt
                         <a href="https://kmetovafrede.github.io/crokit/"> CroKit</a>
                     </div>
                 </div>
-                <!--  
-               <div class="mobile_lines">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div> 
-                -->
             </nav>
             <div class="contents">
                 <section class="section" id="section_about">
@@ -84,13 +75,11 @@ ITW druhý projekt
                             </p>
                         </div>
                     </section>
-
                     <a class="back-to-top js-back-to-top" href="#" data-offset="100">
                         <svg class="cd-icon" viewBox="0 0 20 20">
                           <polyline points="2 13 10 5 18 13" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                         </svg>
                     </a>
-                    
                     <div class="card-container">
                         <div class="card" onclick="flipCard(this)">
                             <div class="card-front">
@@ -104,7 +93,6 @@ ITW druhý projekt
                                 </section>
                             </div>
                             <div class="card" onclick="toggleDropdown(this, event)">
-                                <!-- First dropdown -->
                                 <div class="dropdown-content">
                                     <div class="education">
                                         <h3>Stredná škola</h3>
@@ -112,7 +100,6 @@ ITW druhý projekt
                                         <p>2016 - 2021</p>
                                     </div>
                                 </div>
-                                <!-- Second dropdown -->
                                 <div class="second-dropdown-content">
                                     <div class="education">
                                         <h3>Vysoká škola</h3>
@@ -134,7 +121,6 @@ ITW druhý projekt
                                 </section>
                             </div>
                             <div class="card" onclick="toggleDropdown(this, event)">
-                                <!-- First left dropdown -->
                                 <div class="dropdown-left-content">
                                     <div class="experience">
                                         <h3>Administrátor</h3>
@@ -147,7 +133,6 @@ ITW druhý projekt
                                         <p>2018 - 2019</p>
                                     </div>
                                 </div>
-                                <!-- Second left dropdown -->
                                 <div class="second-dropdown-left-content">
                                     <div class="experience">
                                         <h3>Asistent</h3>
