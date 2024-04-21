@@ -3,25 +3,7 @@ ITW druhý projekt
 2023/2024
 .css file  */
 
-:root {
-    --first_blue: #9bc0ec;
-    --second_blue: #7dace7;
-    --third_blue: #5f99e1;
-    --fourth_blue: #4186dc;
-    --fifth_blue: #1b5296;
-    --sixth_blue: #164278;
-    --seventh_blue: #10315a;
-    --eight_blue: #0b213c;
-    --ninth_blue: #465ab6;
-    --tenth-blue: #20337f;
-    --eleventh-blue: #101e56;
-    --twelfth-blue: #060a26;
-    --thirteenth-blue-light: #90a3f7;
-    --b_black: #000000;
-    --w_white: #ffffff;
-}
-
-
+/* styles for slideshow container */
 .slideshow-container {
     position: relative;
     overflow: hidden;
@@ -44,7 +26,7 @@ ITW druhý projekt
     text-align: center;
 }
 
-
+/* styles for the slideshow itself */
 .slideshow {
     width: 100%;
     height: 60vh;
@@ -72,7 +54,6 @@ ITW druhý projekt
     overflow: hidden;
     background: var(--ninth_blue);
     box-sizing: border-box;
-
 }
 
 .slide {
@@ -110,6 +91,7 @@ label:last-child {
     margin-right: 0;
 }
 
+/* styling for transition between sldies */
 input:checked+label {
     background: linear-gradient(to right, hsla(0, 0%, 100%, 0.7), hsla(233, 50%, 55%, 0.7));
 }
@@ -133,3 +115,4 @@ input:not(:checked)+label+.slide {
     border-radius: 8px;
 }
 
+/* end of carouselstyle.css --------------------------------------------------------------------------------------*/
