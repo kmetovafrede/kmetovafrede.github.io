@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F. | Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Assets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Frederika<span>.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#education">Background</a></li>
+                <li><a href="#toolbox">Toolbox</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="lang-switch"><i class="fa-solid fa-globe"></i> SK</a></li>
+            </ul>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main-container">
+        <section id="about" class="section hero-section">
+            <div class="hero-grid">
+                <div class="hero-image-container">
+                    <div class="avatar-frame">
+                        <img src="img/me.jpg" alt="Frederika Kmeťová" onerror="this.onerror=null; this.src='img/hair-woman.png';">
+                    </div>
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span> Game Design Student
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <span class="sub-title">From Concept to Reality</span>
+                    <h1 class="main-title">Frederika Kmeťová</h1>
+                    <p class="tagline">25 years old <span>|</span> Pixel Art, 3D Modeling & Creation <span>|</span> Brno</p>
+                    
+                    <p class="bio">
+                        I studied Information Technology at <strong>FIT BUT in Brno</strong> and I am currently studying Digital Game Theory at <strong>FMK UCM in Trnava</strong>. I focus on 2D pixel art, 3D modeling, indie game development, programming, and creative work.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> My Work</a>
+                        <a href="https://github.com/kmetovafrede" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Toolbox -->
+        <section id="toolbox" class="section">
+            <h2 class="section-title">Toolbox & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card skill-card--graphics">
+                    <div class="skill-icon"><i class="fa-solid fa-palette"></i></div>
+                    <h3>Graphics & Art</h3>
+                    <p>Krita (2D Pixel Art & Sprites), Blender & Autodesk 3ds Max (3D Modeling), Adobe Photoshop & Illustrator, UI Design</p>
+                </div>
+                <div class="skill-card skill-card--wide">
+                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web & Tech</h3>
+                    <div class="skill-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Swift</span>
+                        <span>Flutter</span><span>React Native</span><span>TypeScript</span><span>Python</span>
+                        <span>SQL</span><span>PHP</span><span>Laravel</span><span>Git</span>
+                        <span>C</span><span>C++</span><span>VHDL</span><span>Shell Scripting</span>
+                    </div>
+                </div>
+                <div class="skill-card skill-card--ux">
+                    <div class="skill-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>UX & Prototyping</h3>
+                    <p>UI/UX design, wireframing, prototyping, visual communication, teamwork, Figma, Canva, Miro, Trello</p>
+                </div>
+                <div class="skill-card skill-card--game">
+                    <div class="skill-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Game Dev</h3>
+                    <p>Narrative Design, RPG Maker, Game Mechanics, Level Design, Prototyping, Creating Graphics and Visuals, Animation, Teamwork</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Experience -->
+        <section id="education" class="section">
+            <div class="section-heading-row">
+                <h2 class="history-heading" role="tablist" aria-label="Education and experience">
+                    <button class="history-heading-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="education-panel" data-history-tab="education-panel">Education</button>
+                    <span aria-hidden="true">&amp;</span>
+                    <button class="history-heading-tab" type="button" role="tab" aria-selected="false" aria-controls="experience-panel" data-history-tab="experience-panel">Experience</button>
+                </h2>
+            </div>
+            <div class="profile-history">
+                <section id="education-panel" class="history-panel history-panel--education is-visible" data-history-panel role="tabpanel">
+                    <header class="history-panel-header">
+                        <div class="history-panel-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div><span class="history-panel-kicker">What I learned</span><h3>Education</h3></div>
+                    </header>
+                    <div class="history-list">
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">2025 — now</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span></div><h4>University of Ss. Cyril and Methodius</h4><p class="timeline-subtitle">FMK · Trnava</p><p>Creation and analysis of digital games with a focus on game design, game narrative, mechanics, and game history.</p></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">2021 — 2025</span><span class="history-entry-country history-entry-country--cz" title="Czechia" aria-label="Czechia"></span></div><h4>Brno University of Technology</h4><p class="timeline-subtitle">FIT · Brno</p><p>Programming, software engineering, databases, operating systems, and web application development through practical projects and teamwork.</p></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">2016 — 2021</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span></div><h4>Gymnázium L. Sáru</h4><p class="timeline-subtitle">Italian Bilingual Section · Bratislava</p><p>Five-year bilingual secondary education with a general focus, including subjects taught in Italian; Italian language proficiency at C1 level.</p></article>
+                    </div>
+                </section>
+                <section id="experience-panel" class="history-panel history-panel--experience" data-history-panel role="tabpanel" hidden>
+                    <header class="history-panel-header">
+                        <div class="history-panel-icon"><i class="fa-solid fa-briefcase"></i></div>
+                        <div><span class="history-panel-kicker">What I have tried</span><h3>Experience</h3></div>
+                    </header>
+                    <div class="history-list">
+                        <article class="history-entry history-entry--current"><div class="history-entry-meta"><span class="history-entry-date">09/2025 — now</span><span class="history-entry-country history-entry-country--cz" title="Czechia" aria-label="Czechia"></span><span class="history-entry-type">Full-time</span></div><h4>Backoffice Assistant</h4><p class="timeline-subtitle history-company-line"><a class="employer-link" href="https://rejstrik-firem.kurzy.cz/76508731/ing-tomas-opravil/" target="_blank" rel="noopener noreferrer">Ing. Tomáš Opravil</a><span><i class="fa-solid fa-location-dot"></i> Brno</span><span class="history-work-mode"><i class="fa-solid fa-building"></i> On-site</span></p><p>E-commerce operations and customer support for a portfolio of online stores. Product management, website translations, social media, and technical maintenance.</p><div class="history-skills"><span>E-commerce</span><span>POHODA</span><span>Support</span><span>Fulfillment</span><span>Social Media</span><span>Translations</span></div></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">04/2024 — 04/2025</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span><span class="history-entry-type">Part-time</span></div><h4>Product Description Copywriter</h4><p class="timeline-subtitle history-company-line"><a class="employer-link" href="https://www.muziker.sk" target="_blank" rel="noopener noreferrer">Muziker, a.s.</a><span><i class="fa-solid fa-house-laptop"></i> Remote</span></p><p>SEO product descriptions and styling content focused on sports and artistic products. Translating product texts for multiple e-shop language versions.</p><div class="history-skills"><span>Copywriting</span><span>SEO Content</span><span>Translations</span><span>Branding</span><span>Styling</span></div></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">07/2019 — 08/2024</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span><span class="history-entry-type">Part-time</span></div><h4>Camp Leader | Teacher | Animator</h4><p class="timeline-subtitle history-company-line"><a class="employer-link" href="https://www.class.sk" target="_blank" rel="noopener noreferrer">CLASS jazyková škola, s.r.o.</a><span><i class="fa-solid fa-location-dot"></i> Smolenice</span><span class="history-work-mode"><i class="fa-solid fa-building"></i> On-site</span></p><p>Leading residential camps for children and teenagers, creating schedules and camp-wide games, and communicating with parents. Teaching English and organizing leisure activities.</p><div class="history-skills"><span>Leadership</span><span>Organization</span><span>Teaching</span><span>English</span></div></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">05/2019 — 09/2021</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span><span class="history-entry-type">Part-time</span></div><h4>Sales Assistant</h4><p class="timeline-subtitle history-company-line"><span>Sports Direct</span><span><i class="fa-solid fa-location-dot"></i> Bratislava</span><span class="history-work-mode"><i class="fa-solid fa-building"></i> On-site</span></p><p>Customer service on the sales floor, visual merchandising, cash register operation, and stock management.</p><div class="history-skills"><span>Customer Care</span><span>Retail</span><span>Merchandising</span><span>Cash Register</span><span>Warehouse</span></div></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">11/2018 — 05/2019</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span><span class="history-entry-type">Part-time</span></div><h4>Barista &amp; Sales Assistant</h4><p class="timeline-subtitle history-company-line"><a class="employer-link" href="https://fruitisimo.sk" target="_blank" rel="noopener noreferrer">FRUITISIMO GROUP s.r.o.</a><span><i class="fa-solid fa-location-dot"></i> Bratislava</span><span class="history-work-mode"><i class="fa-solid fa-building"></i> On-site</span></p><p>Preparing fresh drinks, serving customers, operating the cash register, and maintaining operating standards.</p><div class="history-skills"><span>Customer Care</span><span>POS System</span><span>Bartending</span></div></article>
+                        <article class="history-entry"><div class="history-entry-meta"><span class="history-entry-date">2016 — 2018</span><span class="history-entry-country history-entry-country--sk" title="Slovakia" aria-label="Slovakia"></span><span class="history-entry-type">Part-time</span></div><h4>Administrative Assistant | Warehouse Assistant</h4><p class="timeline-subtitle history-company-line"><a class="employer-link" href="https://www.muziker.sk" target="_blank" rel="noopener noreferrer">Muziker, a.s.</a><span><i class="fa-solid fa-location-dot"></i> Bratislava / Lozorno</span><span class="history-work-mode"><i class="fa-solid fa-building"></i> On-site</span></p><p>Office administration, SAP, document records, and office operations. Preparing, packing, and dispatching orders at the logistics center.</p><div class="history-skills"><span>SAP</span><span>Backoffice</span><span>Warehouse</span><span>Fulfillment</span><span>Logistics</span></div></article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <div class="project-badge">Itch.io</div>
+                        <img class="gamejam-logo" src="img/gamejamplus.webp" alt="GameJam+ logo">
+                    </div>
+                    <h3>Game Prototypes</h3>
+                    <p>Games created during GameJam+ 10th Edition and GameJam+ 2026, for which I received a certificate of participation.</p>
+                    <a href="https://kmetovafrede.itch.io" target="_blank" class="project-link">View on itch.io <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-badge">GitHub</div>
+                    <h3>Web & App Development</h3>
+                    <p>School and personal projects focused on frontend, scripting, and application development.</p>
+                    <a href="https://github.com/kmetovafrede" target="_blank" class="project-link">View Repositories <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div class="project-card">
+                    <div class="project-badge">Photo</div>
+                    <h3>Analog Photography</h3>
+                    <p>Analog photography projects and visual series shot and developed on classic film.</p>
+                    <a href="analogEN.html" class="project-link">Open Gallery <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact</h2>
+            <div class="social-links">
+                <a href="https://github.com/kmetovafrede" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kmetovaf/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://kmetovafrede.itch.io" target="_blank" title="Itch.io"><i class="fa-solid fa-gamepad"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Frederika Kmeťová</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
